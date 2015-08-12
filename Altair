@@ -1,0 +1,100 @@
+<map proto="1.4.0">
+<name>Altairium</name>
+<version>1.0.0</version>
+<objective>Have the most points scored from killing the enemy by the end of the game!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a" /> <!--    LArrowHead  -->
+</authors>
+<teams>
+    <team id="green" color="Green" max="17" max-overfill="20">Green Team</team>
+    <team id="red" color="Dark Red" max="17" max-overfill="20">Red Team</team>
+</teams>
+<score>
+    <kills>2</kills>
+    <deaths>-1</deaths>
+</score>
+<filters>
+    <!--Only red can enter/pick this and that-->
+    <team id="only-red">red</team>
+    <!--Only blue can enter/pick this and that-->
+    <team id="only-green">green</team>
+</filters>
+<regions>
+    <apply block="never">
+        <region>
+            <rectangle min="-oo,-oo" max="oo,oo"/>
+        </region>
+    </apply>
+    <!-- Green Team Base-->
+    <apply enter="only-green" message="You may not enter the other teams spawn area!">
+        <region>
+            <union>
+                <cuboid min="693,57,118" max="675,0,126"/>
+            </union>
+        </region>
+    </apply>
+    <!--Red Team Base-->
+    <apply enter="only-red" message="You may not enter the other teams spawn area!">
+        <region>
+            <union>
+                <cuboid min="675,57,46" max="693,0,38"/>
+            </union>
+        </region>
+    </apply>
+</regions>
+<spawns>
+    <spawn team="green" kit="green-kit">
+        <regions yaw="180">
+            <point>684.5,43.5,124.5</point>
+        </regions>
+    </spawn>
+    <spawn team="red" kit="red-kit">
+        <regions yaw="0">
+            <point>684.5,43.5,40.4</point>
+        </regions>
+    </spawn>
+    <default>
+        <regions yaw="90">
+            <point>684.5,30.5,82.5</point>
+        </regions>
+    </default>
+</spawns>
+<kits>
+    <!--All Armor is locked and unbreakable,tools are also unbreakable-->
+    <kit id="teams">
+        <item slot="0" unbreakable="true">stone sword</item>
+        <item slot="1" unbreakable="true">bow</item>
+        <item slot="8" amount="16">arrow</item>
+        <item slot="2" amount="1">golden apple</item>
+        <leggings unbreakable="true" locked="true">iron leggings</leggings>
+        <boots unbreakable="true" locked="true">chainmail boots</boots>
+        <potion duration="oo">night vision</potion>
+        <potion duration="10" amplifier="5">damage resistance</potion>
+    </kit>
+    <kit id="red-kit" parents="teams">
+        <helmet color="cd0000" unbreakable="true" locked="true">leather helmet</helmet>
+        <chestplate color="cd0000" unbreakable="true" locked="true">leather chestplate</chestplate>
+    </kit>
+    <kit id="green-kit" parents="teams">
+        <helmet color="667F33" unbreakable="true" locked="true">leather helmet</helmet>
+        <chestplate color="667F33" unbreakable="true" locked="true">leather chestplate</chestplate>
+    </kit>
+</kits>
+<!--No Hunger Loss-->
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<itemremove>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>iron leggings</item>
+    <item>leather chestplate</item>
+    <item>leather helmet</item>
+    <item>chainmail boots</item>
+    <item>iron sword</item>
+</itemremove>
+<killreward>
+    <item amount="1">golden apple</item>
+</killreward>
+<time result="default">12m</time>
+</map>
