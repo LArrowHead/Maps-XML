@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<map proto="1.3.6">
+<name>Chiseled Landscape</name>
+<version>1.0.0</version>
+<objective>Destroy the enemy monument or get 250 kills to win!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/> <!-- LarrowHead -->
+    <author uuid="c2848337-b526-4db0-9130-fabd0a5c7cfb"/> <!-- Rasta_Jol -->
+</authors>
+<teams>
+    <team id="blue team" color="blue" max="30" max-overfill="36">Blue Team</team>
+    <team id="red team" color="dark red" max="30" max-overfill="36">Red Team</team>
+</teams>
+<kits>
+    <kit name="spawn" force="true">
+        <item slot="0">stone sword</item>
+        <item slot="1">bow</item>
+        <item slot="2">diamond pickaxe</item>
+        <item slot="3">iron axe</item>
+        <item slot="4" amount="32">baked potato</item>
+        <item slot="5">golden apple</item>
+        <item slot="6" amount="64" damage="1">wood</item>
+        <item slot="8" amount="52">arrow</item>
+        <potion duration="3" amplifier="3">heal</potion>
+        <potion duration="3" amplifier="3">damage resistance</potion>
+        <potion duration="oo" amplifier="3">speed</potion>
+    </kit>
+    <kit name="blue" parents="spawn">
+        <helmet color="0066cc">leather helmet</helmet>
+        <chestplate>chainmail chestplate</chestplate>
+        <leggings color="0066cc">leather leggings</leggings>
+        <boots>chainmail boots</boots>
+    </kit>
+        <kit name="red" parents="spawn">
+        <helmet color="cd0000">leather helmet</helmet>
+        <chestplate>chainmail chestplate</chestplate>
+        <leggings color="cd0000">leather leggings</leggings>
+        <boots>chainmail boots</boots>
+    </kit>
+</kits>
+<killreward>
+    <item amount="6">arrow</item>
+    <item>golden apple</item>
+</killreward>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>diamond pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
+<itemremove>
+    <item>arrow</item>
+    <item>cobblestone</item>
+    <item>flowers</item>
+    <item>grass</item>
+    <item>leaves</item>
+    <item>chests</item>
+    <item>crafting table</item>
+    <item>leather helmet</item>
+    <item>leather leggings</item>
+    <item>chainmail chestplate</item>
+    <item>chainmail boots</item>
+    <item>head</item>
+    <item>lily pad</item>
+    <item>stained clay</item>
+    <item>sand</item>
+</itemremove>
+<spawns>
+    <spawn team="blue" kit="blue">
+        <regions yaw="-90">
+            <block>-524,21,-473</block>
+        </regions>
+    </spawn>
+    <spawn team="red" kit="red">
+        <regions yaw="-90">
+            <block>-524,21,-321</block>
+        </regions>
+    </spawn>
+    <default>
+        <region yaw="90">
+            <block>-317,116,-398</block>
+        </region>
+    </default>
+</spawns>
+<destroyables name="Monument" materials="obsidian" completion="100%">
+    <destroyable owner="blue">
+       <region><cuboid min="-411,28,-345" max="-411,30,-345"/></region>
+    </destroyable>
+    <destroyable owner="red">
+       <region><cuboid min="-411,28,-449" max="-411,30,-499"/></region>
+    </destroyable>
+</destroyables>
+<filters>
+    <filter name="deny-some">
+        <deny>
+            <block>beacon</block>
+            <block>emerald block</block>
+            <block>stained glass</block>
+            <block>monster spawner</block>
+            <block>carpet</block>
+        </deny>
+    </filter>
+</filters>
+<regions>
+    <apply use="deny-some">
+        <rectangle min="-oo,-oo" max="oo,oo"/>
+    </apply>
+</regions>
+<maxbuildheight>42</maxbuildheight>
+<broadcasts>
+    <tip after="10s">[TIP]The Orange beacons represent Spawners.</tip>
+    <tip after="25s">[TIP]The Blue/Red beacons represent Monuments.</tip>
+    <tip after="50s">[TIP]Get 250 Kills or destroy the enemy Moument to win!</tip>
+</broadcasts>
+<score>
+    <limit>250</limit>
+    <kills>1</kills>
+</score>
+<timelock>on</timelock>
+</map>
