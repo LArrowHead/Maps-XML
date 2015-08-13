@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<map proto="1.3.6">
+<include src="blitz-global.xml"/>
+<name>Demelia Trench</name> 
+<version>1.0.0</version> 
+<objective>Elimate the enemy team before time runs out!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/>
+    <!--  LArrowHead  -->
+</authors>
+<contributors>
+    <contributor uuid="c2848337-b526-4db0-9130-fabd0a5c7cfb"/>
+    <!--    Rasta_Jol   -->
+</contributors>
+<teams>
+   <team id="conscripts" color="dark aqua" max="20" max-overfill="25">Conscripts Team</team>
+   <team id="upholders" color="gold" max="20" max-overfill="25">Upholders Team</team>
+</teams>
+<spawns>
+    <spawn team="conscripts" kit="conscr">
+        <regions yaw="90">
+            <block>-248.8,19,-595.4</block>
+        </regions>
+    </spawn>
+    <spawn team="upholders" kit="uphold">
+        <regions yaw="-90">
+            <block>-360.4,19,-595.5</block>
+        </regions>
+    </spawn>
+    <default>
+        <regions yaw="90">
+            <block>-304.6,51,-595.3</block>
+        </regions>
+    </default>
+</spawns>
+<kits>
+    <kit name="spawn" force="true">
+        <item slot="0" enchantment="damage all:100">stone sword</item>
+        <item slot="1" enchantment="arrow damage:100">bow</item>
+        <item slot="2">arrow</item>
+        <item slot="3" amount="8">golden carrot</item>
+        <potion duration="3" amplifier="25">heal</potion>
+        <potion duration="3" amplifier="25">damage resistance</potion>
+        <potion duration="oo" amplifier="1">speed</potion>
+    </kit>
+    <kit name="conscr" parents="spawn">
+        <chestplate color="00FFFF">leather chestplate</chestplate>
+        <boots color="00FFFF">leather boots</boots>
+    </kit>
+    <kit name="uphold" parents="spawn">
+        <chestplate color="FFA500">leather chestplate</chestplate>
+        <boots color="FFA500">leather boots</boots>
+    </kit>
+</kits>
+<regions>
+    <apply block="deny-blocks">
+        <rectangle name="map" min="oo,oo" max="-oo,-oo"/>
+    </apply>
+</regions>
+<blitz>
+    <time>10m</time>
+    <lives>2</lives>
+    <title>Blitz: Rage</title>
+</blitz>
+<rage/>
+<itemremove>
+    <item>golden carrot</item>
+    <item>stone sword</item>
+    <item>arrow</item>
+    <item>bow</item>
+    <item>leather chestplate</item>
+    <item>leather boots</item>
+</itemremove>
+<killreward>
+    <item>arrow</item>
+</killreward>
+<timelock>on</timelock>
+</map>
