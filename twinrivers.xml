@@ -1,0 +1,81 @@
+<map proto="1.4.0">
+<name>Twin Rivers</name>
+<version>1.0.0</version>
+<objective>Eliminte the enemy within 5 minutes!</objective>
+<authors>
+	<author uuid="4418b05d-1b2a-41cc-a7c8-35e18caaae1f"/>
+	<!-- ChelseaFCRocksYT -->
+	<author uuid="5af1f976-4e6e-46d9-bfee-b8177f3f5f24"/>
+	<!-- BM28 -->
+</authors>
+<contributers>
+	<contributor contribution="Build Editing and Construction" uuid="29b3f11e-48a5-4c49-ac4d-1ebbc8311899"/>
+	<!-- MisterEpicness -->
+	<contributor contribution="Support and Voxel Help" uuid="8d1723b8-8393-4e81-aeca-50e3a6083089"/>
+	<!-- Captain_Omega -->
+	<contributor contribution="River Layout and Building" uuid="20221dc6-d9a9-4f03-a2df-10ca29424dfa"/>
+	<!-- CoolshotJ -->
+	<contributor contribution="Feedback and Support" uuid="c3380cc1-9b82-41be-ac21-cf82cfde5bea"/>
+	<!-- NiceZ -->
+</contributors>
+<blitz>
+	<time>5m</time>
+	<lives>2</lives>
+	<broadcastLives>true</broadcastLives>
+	<title>Blitz</title>
+</blitz>
+<include src="blitz-global.xml">
+<teams>
+	<team id="blue-team" color="dark blue" max="10" max-overfill="12">Blue</team>
+	<team id="red-team" color="red" max="10" max-overfill="12">Red</team>
+</teams>
+<kits>
+	<kit name="spawn" force="true">
+		<item slot="0">stone sword</item>
+		<item slot="1">bow</item>
+		<item slot="2">golden apple</item>
+		<item slot="8" amount"10">arrow</item>
+	</kit>	
+	   <kit name="blue" parents="spawn">             	  
+	    <helmet locked="true" color="334CB2">leather helmet</helmet>
+		<chestplate locked="true">iron chestplate</chestplate>
+		<leggings locked="true" color="334CB2">leather leggings</leggings>
+		<boots locked="true" color="334CB2">leather boots</boots>
+	</kit>
+	<kit name="red" parents="spawn">
+		<helmet locked="true" color="cd0000">leather helmet</helmet>
+		<chestplate locked="true">iron chestplate</chestplate>
+		<leggings locked="true" color="cd0000">leather leggings</leggings>
+		<boots locked="true" color="cd0000">leather boots</boots>
+	</kit>	
+</kits>
+<spawns>
+	<spawn team="blue" kit="blue">
+		<regions yaw="90">
+			<region name="blueSpawn"/>
+		</regions>
+	</spawn>
+	<spawn team="red" kit="red">	
+		<regions yaw="90">
+			<region name="redSpawn"/>
+		</regions>
+	</spawn>
+	<default>
+		<regions yaw="180"/>
+			<region name="observerSpawn"/>
+		</regions>
+	</default>
+</spawns>	
+<toolrepair>
+	<tool>stone sword</tool>
+	<tool>bow</tool>
+	<tool>leather helmet</tool>
+	<tool>iron chestplate</tool>
+	<tool>leather leggings</tool>
+	<tool>leather boots</tools>
+</toolrepair>
+<killreward>
+	<item amount="1" material="golden apple">
+</killreward>
+<timelock>on</timelock>
+</map>	
