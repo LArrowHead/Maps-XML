@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<map proto="1.4.0">
+<name>ZemadaCa</name>
+<version>1.0.0</version>
+<objective>Have the most points by the end of 12 minutes!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/> <!-- LArrowHead -->
+</authors>
+    <!--Teams and Spawn Regions-->
+<teams>
+    <team id="blue-team" color="blue" max="14" max-overfill="16">Blue</team> 
+    <team id="red-team" color="dark red" max="14" max-overfill="16">Red</team>
+</teams>
+    <!--Spawn Points in <block> brackets-->
+<spawns>
+    <spawn team="blue-team" kit="blue">
+        <regions yaw="180">
+            <block>528.4,16.5,-45.6</block>
+        </regions>
+    </spawn>
+    <spawn team="red-team" kit="red">
+        <regions yaw="0">
+            <block>528.4,16.5,-161.8</block>
+        </regions>
+    </spawn>
+    <default>
+        <regions yaw="90">
+            <block>528.5,71.5,-103.5</block>
+        </regions>
+    </default>
+</spawns>
+    <!--Region to prevent Breaking of Blocks-->
+<regions>
+    <apply block="never" message="You may not modify the map">
+        <everywhere />
+    </apply>
+</regions>
+    <!-- Kill Rewards, ItemRemove-->
+<killreward>
+    <item amount="4">arrow</item>
+    <item damage="8225" potions="regeneration:160:1:false;heal:1:0:false">potion</item>
+    <item material="potion" damage="8225">
+        <potion duration="16s">regeneration</potion>
+    </item>
+    <item>golden apple</item>
+</killreward>
+<itemremove>
+    <item>chainmail helmet</item>
+    <item>chainmail chestplate</item>
+    <item>leather leggings</item>
+    <item>iron boots</item>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>cooked mutton</item>
+    <item>potion</item>
+</itemremove>
+    <!--score and match pref-->
+<score>
+    <kills>2</kills>
+    <deaths>1</deaths>
+</score>
+<respawn auto="true" delay="2.5s"/>
+<time>12m</time>
+<timelock>on</timelock>
+    <!--Default Potion Removal-->
+    <!--Kits-->
+<kits>
+    <kit id="spawn" force="true">
+        <item slot="0" unbreakable="true" material ="stone sword"/>
+        <item slot="1" unbreakable="true" material ="bow"/>
+        <item slot="2" amount="64" material ="cooked mutton"/>
+        <item slot="3" material="potion" damage="8225">
+            <potion duration="16s">regeneration</potion>
+        </item>
+        <item slot="7" amount="24" material ="arrow"/>
+        <item slot="8" material ="golden apple"/>
+        <potion duration="2s" amplifier="10">damage resistance</potion>
+        <helmet unbreakable="true" material ="chainmail helmet"/>
+        <chestplate unbreakable="true" material ="chainmail chestplate"/>
+        <boots unbreakable="true" material ="iron boots"/>
+    </kit>
+    <kit id="blue" parents="spawn">
+        <leggings unbreakable="true" color="334CB2" material ="leather leggings"/>       
+    </kit>
+    <kit id="red" parents="spawn">
+        <leggings unbreakable="true" color="993333" material ="leather leggings"/>
+    </kit>
+</kits>
+    <!--Broadcasts and Map Rules-->
+<rules>
+    <rule>Do not block glitch in any part of the map to gain an advantage</rule>
+</rules>
+<broadcasts>
+    <tip after="1m" every="5m">There is 11 Instant Health Spawners on the map, use them wisely!</tip>
+</broadcasts>
+</map>
