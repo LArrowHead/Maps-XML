@@ -16,7 +16,7 @@
 <flags>
     <post id="red-flag-post" respawn-time="15s" recover-time="15s" pickup-filter="only-attackers" yaw="-90">376.5,17.5,-209.5</post>
     <pickup-kit force="true">
-        <potion amplifier="1.5" duration="oo">slowness</potion>
+        <potion amplifier="2" duration="oo">slowness</potion>
     </pickup-kit>
     <drop-kit>
         <potion duration="0">slowness</potion>
@@ -64,7 +64,7 @@
     <kit name="attackers" parents="spawn">
         <chestplate unbreakable="true">chainmail chestplate</chestplate>
         <leggings color="FF0000" unbreakable="true">leather leggings</leggings>
-        <boots unbreakable="true" enchantment="depth strider:1">iron boots</boots>
+        <boots unbreakable="true" enchantment="depth strider:1">chain boots</boots>
         <item slot="6" amount="2">glass</item>
         <potion duration="1s" amplifier="3">strength</potion>
     </kit>
@@ -91,6 +91,7 @@
     <item>golden apple</item>
     <item>long grass</item>
     <item>red rose</item>
+    <item>chainmail boots</item>
 </itemremove>
 <toolrepair>
     <tool>stone sword</tool>
