@@ -16,7 +16,7 @@
 <flags>
     <post id="red-flag-post" respawn-time="15s" recover-time="10s" pickup-filter="only-attackers" yaw="-90">376.5,17.5,-209.5</post>
     <pickup-kit force="true">
-        <potion amplifier="1.5" duration="oo">slowness</potion>
+        <potion amplifier="3" duration="oo">slowness</potion>
     </pickup-kit>
     <drop-kit>
         <potion duration="0">slowness</potion>
