@@ -59,7 +59,7 @@
         <item slot="8" amount="2">golden apple</item>
         <helmet unbreakable="true" enchantment="protection projectile:1">chainmail helmet</helmet>
         <potion duration="3s" amplifier="25">damage resistance</potion>
-        <potion duration="1m" amplifier="1">speed</potion>
+        <potion duration="30s" amplifier="1">speed</potion>
     </kit>
     <kit name="attackers" parents="spawn">
         <chestplate unbreakable="true">chainmail chestplate</chestplate>
