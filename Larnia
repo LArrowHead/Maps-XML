@@ -15,13 +15,7 @@
 </control-points>
 <flags>
     <post id="red-flag-post" respawn-time="15s" recover-time="10s" pickup-filter="only-attackers" yaw="-90">376.5,17.5,-209.5</post>
-    <pickup-kit force="true">
-        <potion amplifier="3" duration="oo">slowness</potion>
-    </pickup-kit>
-    <drop-kit>
-        <potion duration="0">slowness</potion>
-    </drop-kit>
-    <flag id="green-flag" name="Green Flag" color="green" post="red-flag-post" />
+    <flag id="green-flag" carry-message="`f`lTake the Flag to `4Red Beacon" pickup-kit="slowness" drop-kit="slowness-rm" name="Green Flag" color="green" post="red-flag-post" />
     <net post="red-flag-post" points="1" region="red-net" capture-filter="only-attackers" />
 </flags>
 <score>
@@ -51,6 +45,12 @@
 </spawns>
 <respawn auto="true" delay="2s"/>
 <kits>
+    <kit name="slowness" force="true">
+        <potion amplifier="3" duration="oo">slowness</potion>
+    </kit>
+    <kit name="slowness-rm">
+        <potion duration="0">slowness</potion>
+    </kit>
     <kit name="spawn" force="true">
         <item slot="0" unbreakable="true">stone sword</item>
         <item slot="1" unbreakable="true">bow</item>
