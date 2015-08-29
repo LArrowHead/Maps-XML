@@ -14,7 +14,7 @@
     </control-point>
 </control-points>
 <flags>
-    <post id="red-flag-post" respawn-time="15s" recover-time="10s" pickup-filter="only-attackers" yaw="-90">376.5,17.5,-209.5</post>
+    <post id="red-flag-post" respawn-time="15s" recover-time="15s" pickup-filter="only-attackers" yaw="-90">376.5,17.5,-209.5</post>
     <flag id="green-flag" carry-message="`f`lTake the Flag to `4Red Beacon" pickup-kit="slowness" drop-kit="slowness-rm" name="Green Flag" color="green" post="red-flag-post" />
     <net post="red-flag-post" points="1" region="red-net" capture-filter="only-attackers" />
 </flags>
@@ -46,7 +46,7 @@
 <respawn auto="true" delay="2s"/>
 <kits>
     <kit name="slowness" force="true">
-        <potion amplifier="3" duration="oo">slowness</potion>
+        <potion amplifier="2.5" duration="oo">slowness</potion>
     </kit>
     <kit name="slowness-rm">
         <potion duration="0">slowness</potion>
