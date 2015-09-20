@@ -98,6 +98,7 @@
         </regions>
     </default>
 </spawns>
+
 <kits>
     <kit id="dummy">
         <game-mode>creative</game-mode>
@@ -145,7 +146,9 @@
         <boots color="E5E533" unbreakable="true" locked="true">leather boots</boots>
     </kit>
 </kits>
+
 <timelock>on</timelock>
+
 <itemremove>
     <item>stone sword</item>
     <item>bow</item>
@@ -155,11 +158,15 @@
     <item>leather boots</item>
     <item>baked potato</item>
 </itemremove>
+
 <killreward>
     <item amount="10">arrow</item>
 </killreward>
+
 <broadcasts>
     <tip after="0s">`fWhile you hold the capture point you will recieve 1 golden apple upon leaving spawn!</tip>
 </broadcasts>
+
 <time result="default">12m</time>
+
 </map>
