@@ -1,0 +1,165 @@
+<map proto="1.4.0">
+<name>Tinted</name>
+<version>1.0.0</version>
+<objective>
+  Have the most kills by the end of the game!
+</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/> <!--     LArrowHead   -->
+</authors>
+<teams>
+    <team id="yellow" color="Yellow" max="10">Yellow Team</team>
+    <team id="green" color="Dark Green" max="10">Green Team</team>
+</teams>
+<score>
+    <kills>1</kills>
+</score>
+<control-points capture-players="exclusive" incremental="true" visual-materials="hill-materials" show-progress="true" points="0" required="false">
+    <control-point id="hill" name="Hill" capture-time="10s">
+        <capture><cuboid min="712,6,254" max="719,9,259"/></capture>
+        <progress><cuboid min="712,6,254" max="719,9,259"/></progress>
+        <captured><cuboid min="712,6,254" max="719,9,259"/></captured>
+    </control-point>
+</control-points>
+<filters>
+ 
+    <not id="deny-beacon">
+        <material>beacon</material>
+    </not>
+    <any id="hill-materials">
+        <material>wool</material>
+    </any>
+ 
+    <team id="only-yellow">yellow</team>
+    <team id="only-green">green</team>
+ 
+    <any id="green-capture">
+        <objective team="green">hill</objective>
+    </any>
+    <any id="yellow-capture">
+        <objective team="yellow">hill</objective>
+    </any>
+ 
+</filters>
+ 
+<regions>
+ 
+    <apply enter="never" filter="green-capture" message="`fYou may not re-enter your spawn while your team controls the hill!">
+        <region>
+            <rectangle id="green-spawn" min="704,228" max="727,205"/>
+        </region>
+    </apply>
+    <apply enter="never" filter="yellow-capture" message="`fYou may not re-enter your spawn while your team controls the hill!">
+        <region>
+            <rectangle id="yellow-spawn" min="727,285" max="704,308"/>
+        </region>
+    </apply>
+     
+    <apply block="never" use="deny-beacon">
+        <region>
+            <rectangle min="-oo,-oo" max="oo,oo"/>
+        </region>
+    </apply>
+ 
+    <apply kit="capture-kit-green" filter="green-capture">
+        <everywhere />
+        <region>
+            <negative>
+                <region id="green-spawn" />
+            </negative>
+        </region>
+    </apply>
+     
+    <apply kit="capture-kit-yellow" filter="yellow-capture">
+        <everywhere />
+        <region>
+            <negative>
+                <region id="yellow-spawn" />
+            </negative>
+        </region>
+    </apply>
+ 
+</regions>
+ 
+<spawns>
+    <spawn team="yellow" kit="yellow-kit">
+        <regions yaw="180">
+            <point>715,12,300</point>
+        </regions>
+    </spawn>
+    <spawn team="green" kit="green-kit">
+        <regions yaw="0">
+            <point>715,12,212</point>
+        </regions>
+    </spawn>
+    <default kit="observers">
+        <regions yaw="90">
+            <point>715,31,256</point>
+        </regions>
+    </default>
+</spawns>
+<kits>
+    <kit id="dummy">
+        <game-mode>creative</game-mode>
+    </kit>
+    <kit id="teams">
+        <game-mode>adventure</game-mode>
+        <item slot="0" unbreakable="true">stone sword</item>
+        <item slot="1" unbreakable="true">bow</item>
+        <item slot="2" amount="32">baked potato</item>
+        <item slot="8" amount="16">arrow</item>
+        <leggings unbreakable="true" locked="true">chainmail leggings</leggings>
+        <potion duration="oo">night vision</potion>
+    </kit>
+    <kit id="capture-kit-yellow" filter="only-yellow" parents="yellow-kit">
+        <game-mode>adventure</game-mode>
+        <item slot="0" unbreakable="true">stone sword</item>
+        <item slot="1" unbreakable="true">bow</item>
+        <item slot="2" amount="32">baked potato</item>
+        <item slot="8" amount="24">arrow</item>
+        <item slot="3">golden apple</item>
+        <leggings unbreakable="true" locked="true">chainmail leggings</leggings>
+        <potion duration="oo">night vision</potion>
+    </kit>
+        <kit id="capture-kit-green" filter="only-green" parents="green-kit">
+        <game-mode>adventure</game-mode>
+        <item slot="0" unbreakable="true">stone sword</item>
+        <item slot="1" unbreakable="true">bow</item>
+        <item slot="2" amount="32">baked potato</item>
+        <item slot="8" amount="24">arrow</item>
+        <item slot="3">golden apple</item>
+        <leggings unbreakable="true" locked="true">chainmail leggings</leggings>
+        <potion duration="oo">night vision</potion>
+    </kit>
+    <kit id="observers">
+      <potion duration="oo">night vision</potion>
+    </kit>
+    <kit id="green-kit" parents="teams">
+        <helmet color="667F33" unbreakable="true" locked="true">leather helmet</helmet>
+        <chestplate color="667F33" unbreakable="true" locked="true">leather chestplate</chestplate>
+        <boots color="667F33" unbreakable="true" locked="true">leather boots</boots>
+    </kit>
+    <kit id="yellow-kit" parents="teams">
+        <helmet color="E5E533" unbreakable="true" locked="true">leather helmet</helmet>
+        <chestplate color="E5E533" unbreakable="true" locked="true">leather chestplate</chestplate>
+        <boots color="E5E533" unbreakable="true" locked="true">leather boots</boots>
+    </kit>
+</kits>
+<timelock>on</timelock>
+<itemremove>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>chainmail leggings</item>
+    <item>leather chestplate</item>
+    <item>leather helmet</item>
+    <item>leather boots</item>
+    <item>baked potato</item>
+</itemremove>
+<killreward>
+    <item amount="10">arrow</item>
+</killreward>
+<broadcasts>
+    <tip after="0s">`fWhile you hold the capture point you will recieve 1 golden apple upon leaving spawn!</tip>
+</broadcasts>
+<time result="default">12m</time>
+</map>
