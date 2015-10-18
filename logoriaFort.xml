@@ -1,0 +1,127 @@
+<map proto="1.4.0">
+<name>Logoria Fort</name>
+<version>1.0.0</version>
+<objective>Hold the hill for points, kills count too!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/> <!--     LArrowHead   -->
+</authors>
+<contributors>
+    <contributor uuid="7ab24d14-0801-48ba-8fea-147ddf400067"/> <!-- samthecat43 -->
+</contributors>
+
+<teams>
+    <team id="red" color="Dark Red" max="18" max-overfill="20">Red Team</team>
+    <team id="green" color="Dark Green" max="18" max-overfill="20">Green Team</team>
+</teams>
+<score>
+    <kills>3</kills>
+    <deaths>1</deaths>
+</score>
+<king>
+<!--
+ Must be more players of one team on hill to be capping
+ Must go through a full percentage cycle twice to capture it from other team
+-->
+    <hills capture-rule="lead" neutral-state="true" visual-materials="hill-materials" required="false">
+        <hill id="middle-point" name="Middle Hill" capture-time="10s" points="0.2">
+            <capture>
+                <cuboid min="1020,9,706" max="1010,14,702"/>
+                <cuboid min="1011,9,700" max="1019,14,708"/>
+                <cuboid min="1018,9,709" max="1012,14,699"/>
+                <cuboid min="1017,9,710" max="1013,14,698"/>
+            </capture>
+            <progress>
+                <cuboid min="1020,9,706" max="1010,14,702"/>
+                <cuboid min="1011,9,700" max="1019,14,708"/>
+                <cuboid min="1018,9,709" max="1012,14,699"/>
+                <cuboid min="1017,9,710" max="1013,14,698"/>
+            </progress>
+            <captured>
+                <cuboid min="1020,9,706" max="1010,14,702"/>
+                <cuboid min="1011,9,700" max="1019,14,708"/>
+                <cuboid min="1018,9,709" max="1012,14,699"/>
+                <cuboid min="1017,9,710" max="1013,14,698"/>
+            </captured>
+        </hill>
+    </hills>
+</king>
+<filters>
+<!-- Denies Beacon use/break -->
+    <not id="deny-beacon">
+        <material>beacon</material>
+    </not>
+<!-- Materials for hill color change -->
+    <any id="hill-materials">
+        <material>wool</material>
+        <material>stained glass</material>
+    </any>
+</filters>
+<regions>
+<!-- Denies blocks anywhere -->
+    <apply block="never" use="deny-beacon">
+        <region>
+            <rectangle min="-oo,-oo" max="oo,oo"/>
+        </region>
+    </apply>
+</regions>
+<spawns>
+    <spawn team="green" kit="green-kit">
+        <regions yaw="0">
+            <point>1015,15,648</point>
+        </regions>
+    </spawn>
+    <spawn team="red" kit="red-kit">
+        <regions yaw="-180">
+            <point>1015,15,761</point>
+        </regions>
+    </spawn>
+    <default>
+        <regions yaw="90">
+            <point>1015,63,704</point>
+        </regions>
+    </default>
+</spawns>
+<kits>
+<!--
+All Armor is locked and unbreakable,tools are also unbreakable
+-->
+    <kit id="teams">
+        <item slot="0" unbreakable="true">stone sword</item>
+        <item slot="1" unbreakable="true">bow</item>
+        <item slot="8" amount="25">arrow</item>
+        <item slot="2" amount="1">golden apple</item>
+        <potion duration="oo">night vision</potion>
+        <potion duration="5" amplifier="5">damage resistance</potion>
+    </kit>
+    <kit id="red-kit" parents="teams">
+        <helmet unbreakable="true" locked="true">chainmail helmet</helmet>
+        <leggings color="cd0000" unbreakable="true" locked="true">leather leggings</leggings>
+        <chestplate unbreakable="true" locked="true">golden chestplate</chestplate>
+        <boots color="cd0000" unbreakable="true" locked="true">leather boots</boots>
+    </kit>
+    <kit id="green-kit" parents="teams">
+        <helmet unbreakable="true" locked="true">leather helmet</helmet>
+        <leggings color="667F33" unbreakable="true" locked="true">leather leggings</leggings>
+        <chestplate unbreakable="true" locked="true">golden chestplate</chestplate>
+        <boots color="667F33" unbreakable="true" locked="true">leather boots</boots>
+    </kit>
+</kits>
+<!-- No Hunger Loss -->
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<timelock>on</timelock>
+<itemremove>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>leather leggings</item>
+    <item>golden chestplate</item>
+    <item>chainmail helmet</item>
+    <item>leather boots</item>
+    <item>golden apple</item>
+</itemremove>
+<killreward>
+    <item amount="1">golden apple</item>
+    <item amount="6">arrow</item>
+</killreward>
+</map>
