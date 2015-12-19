@@ -13,7 +13,7 @@
         <kills>1</kills>
     </score>
     <spawns>
-        <spawn angle= "915,7,1053" outside="true" spread="true" kit="spawn">
+        <spawn angle="915,7,1053" outside="true" spread="true" kit="spawn">
             <regions>
                 <point>889,6,1027</point>
                 <point>941,6,1027</point>
@@ -52,8 +52,9 @@
             <potion duration="oo" amplifier="2">speed</potion>
             <double-jump power="5"/>
             <game-mode>adventure</game-mode>
+        </kit>
         <kit id="lazer-kit" parents="spawn">
-            <item projectile ="lazergun" name="lazer!" material="stick" slot="0"/>
+            <item projectile="lazergun" name="lazer!" material="stick" slot="0"/>
         </kit>
     </kits>
     <disabledamage>
