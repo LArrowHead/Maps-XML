@@ -38,10 +38,10 @@
             id="lazergun"
             name="lazergun"
             projectile="Snowball"
-            velocity="4.5"
+            velocity="3"
             damage="1000"
             throwable="false"
-            cooldown="4s"/>
+            cooldown="2s"/>
     </projectiles>
 
 <!-- Applying the lazergun to an item -->
@@ -54,7 +54,7 @@
             <game-mode>adventure</game-mode>
         </kit>
         <kit id="lazer-kit" parents="spawn">
-            <item projectile="lazergun" name="lazer!" material="stick" slot="0"/>
+            <item projectile="lazergun" name="lazer!" material="diamond barding" slot="0"/>
         </kit>
     </kits>
     <disabledamage>
