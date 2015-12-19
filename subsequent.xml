@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+?xml version="1.0"?>
 <map game="Subsequent" proto="1.4.0">
     <name>Subsequent</name>
     <version>1.0.0</version>
@@ -36,29 +36,60 @@
     <projectiles>
         <projectile
             id="lazergun"
-            name="lazergun"
+            name="Lazergun"
             projectile="Snowball"
             velocity="3"
-            damage="1000"
+            damage="10"
             throwable="false"
-            cooldown="2s"/>
+            cooldown="1s"/>
+            <projectile
+            id="grenade"
+            name="Grenade"
+            projectile="TNTPrimed"
+            velocity="2"
+            damage="4"
+            throwable="true"
+            cooldown="5s"/>
     </projectiles>
-
+    <tnt>
+        <instantignite>on</instantignite>
+        <fuse>2s</fuse>
+        <blockdamage>false</blockdamage>
+    </tnt>
+ 
 <!-- Applying the lazergun to an item -->
     <kits>
-        <kit id="spawn" force="true">
-            <helmet color="191919" unbreakable="true" locked="true" material="leather helmet"/>
-            <boots color="191919" unbreakable="true" locked="true" material="leather boots"/>
+        <kit id="spawn">
+            <helmet color="191919" locked="true" unbreakable="true" material="leather helmet"/>
+            <boots color="191919" locked="true" unbreakable="true" material="leather boots"/>
             <potion duration="oo" amplifier="2">speed</potion>
+            <potion duration="oo" amplifier="-4">health boost</potion>
             <double-jump power="4"/>
             <game-mode>adventure</game-mode>
         </kit>
         <kit id="lazer-kit" parents="spawn">
-            <item projectile="lazergun" name="lazer!" material="diamond barding" slot="0"/>
+            <item projectile="lazergun" name="`d`lL`5`lA`1`lZ`2`lE`a`lR`e`lG`6`lU`4`lN" material="diamond barding" slot="0"/>
         </kit>
     </kits>
+    <kill-rewards>
+        <kill-reward>
+            <filter>
+                <kill-streak count="3"/>
+            </filter>
+            <kit force="true">
+                <potion duration="oo" amplifier="3">speed</potion>
+            </kit>
+        </kill-reward>
+        <kill-reward>
+            <filter>
+                <kill-streak count="3" repeat="true"/>
+            </filter>
+            <item projectile="grenade" name="`4`lGrenade" enchantment="durability" material="TNT" slot="1"/>
+        </kill-reward>
+    </kill-rewards>
     <disabledamage>
         <damage>fall</damage>
+        <damage>entity attack</damage>
     </disabledamage>
     <hunger>
         <depletion>off</depletion>
