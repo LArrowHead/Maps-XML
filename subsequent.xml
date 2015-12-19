@@ -47,8 +47,8 @@
 <!-- Applying the lazergun to an item -->
     <kits>
         <kit id="spawn" force="true">
-            <helmet color="191919" material="leather helmet"/>
-            <boots color="191919" material="leather boots"/>
+            <helmet color="191919" unbreakable="true" material="leather helmet"/>
+            <boots color="191919" unbreakable="true" material="leather boots"/>
             <potion duration="oo" amplifier="2">speed</potion>
             <double-jump power="5"/>
             <game-mode>adventure</game-mode>
