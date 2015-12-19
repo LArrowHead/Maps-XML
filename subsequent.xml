@@ -1,48 +1,71 @@
-<map proto="1.4.0">
-<name>Subsequent</name>
-<version>1.0.0</version>
-<objective>Reach 25 points first using your paintball gun!</objective>
-<authors>
-    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/><! -- LArrowHead -- >
-</authors>
-<players max="10"/>
-<time>10m</time>
-<score>
-    <limit>25</limit>
-    <kills>1</kills>
-</score>
-<projectiles>
-    <projectile
-        id="lazergun"
-        name="lazergun"
-        projectile="Snowball"
-        velocity="4.5"
-        damage="1000"
-        throwable="false"
-        cooldown="4s"/>
-</projectiles>
+<?xml version="1.0"?>
+<map game="Subsequent" proto="1.4.0">
+    <name>Subsequent</name>
+    <version>1.0.0</version>
+    <objective>Reach 25 points first using your paintball gun!</objective>
+    <authors>
+        <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/><! -- LArrowHead -- >
+    </authors>
+    <players max="10"/>
+    <time>10m</time>
+    <score>
+        <limit>25</limit>
+        <kills>1</kills>
+    </score>
+    <spawns>
+        <spawn angle= "915,7,1053" outside="true" spread="true" kit="spawn">
+            <regions>
+                <point>889,6,1027</point>
+                <point>941,6,1027</point>
+                <point>941,6,1079</point>
+                <point>889,6,1079</point>
+                <point>875,19,1053</point>
+                <point>955,19,1053</point>
+                <point>903,5.5,1087</point>
+                <point>881,5.5,1041</point>
+                <point>927,5.5,1019</point>
+                <point>949,5.5,1065</point>
+            </regions>
+        </spawn>
+        <default>
+            <regions yaw="-90">
+                <point>915,10,1053</point>
+            </regions>
+        </default>
+    </spawns>
+    <projectiles>
+        <projectile
+            id="lazergun"
+            name="lazergun"
+            projectile="Snowball"
+            velocity="4.5"
+            damage="1000"
+            throwable="false"
+            cooldown="4s"/>
+    </projectiles>
 
 <!-- Applying the lazergun to an item -->
-<kits>
-    <kit id="spawn" force="true">
-        <helmet color="191919" material="leather helmet"/>
-        <boots color="191919" material="leather boots"/>
-        <potion duration="oo" amplifier="2">speed</potion>
-        <double-jump power="5"/>
-        <game-mode>adventure</game-mode>
-    <kit id="lazer-kit" parents="spawn">
-        <item projectile ="lazergun" name="lazer!" material="stick" slot="0"/>
-    </kit>
-</kits>
-<disabledamage>
-    <damage>fall</damage>
-</disabledamage>
-<hunger>
-    <depletion>off</depletion>
-</hunger>
-<itemremove>
-    <item>leather boots</item>
-    <item>leather helmet</item>
-    <item>stick</item>
-</itemremove>
+    <kits>
+        <kit id="spawn" force="true">
+            <helmet color="191919" material="leather helmet"/>
+            <boots color="191919" material="leather boots"/>
+            <potion duration="oo" amplifier="2">speed</potion>
+            <double-jump power="5"/>
+            <game-mode>adventure</game-mode>
+        <kit id="lazer-kit" parents="spawn">
+            <item projectile ="lazergun" name="lazer!" material="stick" slot="0"/>
+        </kit>
+    </kits>
+    <disabledamage>
+        <damage>fall</damage>
+    </disabledamage>
+    <hunger>
+        <depletion>off</depletion>
+    </hunger>
+    <respawn auto="true"/>
+    <itemremove>
+        <item>leather boots</item>
+        <item>leather helmet</item>
+        <item>stick</item>
+    </itemremove>
 </map>
