@@ -24,13 +24,11 @@
 
 <!-- Applying the lazergun to an item -->
 <kits>
-    <kit name="spawn">
+    <kit id="spawn">
         <helmet color="191919" material="leather helmet"/>
-        
-        
-    
-    <kit name="lazer-kit" parents="spawn">
-        <item projectile = "lazergun" name="lazer!" material="stick"/>
+        <potion duration="oo" amplifier="2">speed</potion>
+    <kit id="lazer-kit" parents="spawn">
+        <item projectile ="lazergun" name="lazer!" material="stick"/>
     </kit>
 </kits>
 
