@@ -1,0 +1,38 @@
+<map proto="1.4.0">
+<name>Subsequent</name>
+<version>1.0.0</version>
+<objective>Reach 25 points first using your paintball gun!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/><! -- LArrowHead -- >
+</authors>
+<players max="10" max-overfill="14"/>
+<time>10m</time>
+<score>
+    <kills>1</kills>
+    <deaths>1</deaths>
+</score>
+<projectiles>
+    <projectile
+        id="lazergun"
+        name="lazergun"
+        projectile="Snowball"
+        velocity="3.5"
+        damage="1000"
+        throwable="false"
+        cooldown="4s"/>
+</projectiles>
+
+<!-- Applying the lazergun to an item -->
+<kits>
+    <kit name="spawn">
+        <helmet color="191919" material="leather helmet"/>
+        
+        
+    
+    <kit name="lazer-kit" parents="spawn">
+        <item projectile = "lazergun" name="lazer!" material="stick"/>
+    </kit>
+</kits>
+
+
+</map>
