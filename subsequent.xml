@@ -13,7 +13,7 @@
         <kills>1</kills>
     </score>
     <spawns>
-        <spawn angle="915,7,1053" outside="true" spread="true" kit="spawn">
+        <spawn angle="915,7,1053" outside="true" spread="true" kit="lazer-kit">
             <regions>
                 <point>889,6,1027</point>
                 <point>941,6,1027</point>
