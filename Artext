@@ -58,8 +58,6 @@
     </hills>
 </king>
 <filters>
-    <!--  Denies Beacon use/break  -->
-    <not id="deny-beacon">...</not>
     <!--  Materials for hill color change  -->
     <any id="hill-materials">
         <material>stained clay</material>
@@ -74,7 +72,7 @@
     <cuboid id="red-net" min="645,6,-72" max="642,8,-77"/>
     <cuboid id="blue-net" min="743,6,-72" max="740,8,-77"/>
     <!--  Denies blocks anywhere  -->
-    <apply block="never" use="deny-beacon">
+    <apply block="never">
         <region>
             <rectangle min="-oo,-oo" max="oo,oo"/>
         </region>
