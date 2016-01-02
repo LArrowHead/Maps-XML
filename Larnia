@@ -78,7 +78,7 @@
         <item slot="6" amount="6">glass</item>
     </kit>
 </kits>
-<maxbuildheight>46</maxbuildheight>
+<maxbuildheight>39</maxbuildheight>
 <timelock>on</timelock>
 <itemremove>
     <item>baked potato</item>
