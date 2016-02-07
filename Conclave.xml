@@ -161,7 +161,7 @@
         <item prevent-sharing="true" damage="4" name="4">ink sack</item>
     </carrying>
     <carrying id="sack-f">
-        <item prevent-sharing="true" damage=10" name="f">ink sack</item>
+        <item prevent-sharing="true" damage="10" name="f">ink sack</item>
     </carrying>
     <carrying id="sack-lf">
         <item prevent-sharing="true" damage="5" name="lf">ink sack</item>
