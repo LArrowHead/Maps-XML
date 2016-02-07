@@ -6,6 +6,9 @@
 <authors>
     <author uuid="a4266139-34f3-46c5-a730-f8828376a15a" /> <!-- LArrowHead !-->
 </authors>
+<contributors>
+    <contributor contribution="XML Template" uuid="e79fbdc9-627e-4dac-97a6-81a3046220d7" /> <!-- AtlasGames !-->
+</contributors>
 <players max="8" max-overfill="8" />
 <score>
     <limit>2</limit>
