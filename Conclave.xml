@@ -59,25 +59,25 @@
     </kit>
 <!-- CheckPoint Kits !-->
     <kit id="sack-kit-0" force="true">
-        <item prevent-sharing="true" damage="0" slot="9" name="0">ink sack</item>
+        <item prevent-sharing="true" damage="0" slot="slot.armor.legs" locked="true" name="0">ink sack</item>
     </kit>
     <kit id="sack-kit-1" force="true">
-        <item prevent-sharing="true" damage="1" slot="9" name="1">ink sack</item>
+        <item prevent-sharing="true" damage="1" slot="slot.armor.legs" locked="true" name="1">ink sack</item>
     </kit>
     <kit id="sack-kit-2" force="true">
-        <item prevent-sharing="true" damage="2" slot="9" name="2">ink sack</item>
+        <item prevent-sharing="true" damage="2" slot="slot.armor.legs" locked="true" name="2">ink sack</item>
     </kit>
     <kit id="sack-kit-3" force="true">
-        <item prevent-sharing="true" damage="3" slot="9" name="3">ink sack</item>
+        <item prevent-sharing="true" damage="3" slot="slot.armor.legs" locked="true" name="3">ink sack</item>
     </kit>
     <kit id="sack-kit-4" force="true">
-        <item prevent-sharing="true" damage="4" slot="9" name="4">ink sack</item>
+        <item prevent-sharing="true" damage="4" slot="slot.armor.legs" locked="true" name="4">ink sack</item>
     </kit>
     <kit id="sack-kit-leftfinal" force="true">
-        <item prevent-sharing="true" damage="5" slot="9" name="lf">ink sack</item>
+        <item prevent-sharing="true" damage="5" slot="slot.armor.legs" locked="true" name="lf">ink sack</item>
     </kit>
     <kit id="sack-kit-rightfinal" force="true">
-        <item prevent-sharing="true" damage="6" slot="9" name="rf">ink sack</item>
+        <item prevent-sharing="true" damage="6" slot="slot.armor.legs" locked="true" name="rf">ink sack</item>
     </kit>
 </kits>
 <regions>
