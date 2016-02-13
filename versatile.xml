@@ -31,7 +31,7 @@
         <item slot="0" unbreakable="true">stone sword</item>
         <item slot="1" unbreakable="true">bow</item>
         <item slot="2" amount="16">arrow</item>
-        <item slot="8" amount="16">steak</item>
+        <item slot="8" amount="16">bread</item>
         <potion duration="oo">night vision</potion>
     </kit>
     <kit id="blue-kit" parents="spawnKit">
@@ -46,7 +46,7 @@
         <leggings unbreakable="true">iron leggings</leggings>
         <boots color="cd0000" unbreakable="true">leather boots</boots>
     </kit>
-        <kit id="red-flag-kit">
+    <kit id="red-flag-kit">
         <potion duration="oo">slowness</potion>
     </kit>
     <kit id="blue-flag-kit">
@@ -58,11 +58,11 @@
     <kit id="reset-kit" force="true">
         <potion duration="0" amplifier="10">slowness</potion>
     </kit>
+</kits>
     <regions>
     <cylinder id="blue-net" base="-67.5,2,-13.5" radius="2" height="2" />
     <cylinder id="red-net" base="34.5,2,6.5" radius="2" height="2" />
 </regions>
-</kits>
 
 <flags flag-proximity-metric="closest player">
     <flag id="red-flag" name="Red Flag" owner="red" pickup-kit="red-flag-kit" drop-kit="reset-kit">
@@ -97,7 +97,7 @@
     <item>iron boots</item>
     <item>stone sword</item>
     <item>bow</item>
-    <item>steak</item>
+    <item>bread</item>
     <item>arrow</item>
 </itemremove>
 <timelock>on</timelock>
