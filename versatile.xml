@@ -59,7 +59,7 @@
         <potion duration="0" amplifier="10">slowness</potion>
     </kit>
 </kits>
-    <regions>
+<regions>
     <cylinder id="blue-net" base="-67.5,2,-13.5" radius="2" height="2" />
     <cylinder id="red-net" base="34.5,2,6.5" radius="2" height="2" />
 </regions>
