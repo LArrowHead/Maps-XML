@@ -18,7 +18,7 @@
 <spawns>
     <default kit="obsKit">
         <regions yaw="180">
-            <cylinder base="-16.5,13,23.5" radius="2" height="2"/>
+            <cylinder base="-16.5,13,23.5" radius="1" height="2"/>
         </regions>
     </default>
     <spawn team="red" kit="red-kit"><regions yaw="90"><cylinder base="44.5,3,6.5" radius="1" height="1"/></regions></spawn>
