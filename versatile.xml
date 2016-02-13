@@ -60,8 +60,8 @@
     </kit>
 </kits>
 <regions>
-    <cylinder id="blue-net" base="-67.5,2,-13.5" radius="2" height="2" />
-    <cylinder id="red-net" base="34.5,2,6.5" radius="2" height="2" />
+    <cylinder id="blue-net" base="-57.5,11,-13.5" radius="2" height="2" />
+    <cylinder id="red-net" base="24.5,11,6.5" radius="2" height="2" />
 </regions>
 
 <flags flag-proximity-metric="closest player">
