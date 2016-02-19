@@ -39,6 +39,7 @@
 <kits>
     <kit id="spawn-kit" force="true">
         <clear-items/>
+        <leggings>air</leggings>
         <boots unbreakable="true" locked="true">chainmail boots</boots>
         <item slot="0" amount="64">tnt</item>
         <item slot="1" amount="64">tnt</item>
@@ -57,43 +58,43 @@
         <potion duration="oo" amplifier="1000">harm</potion>
         <potion duration="0s" amplifier="1">resistance</potion>
     </kit>
-<!-- CheckPoint Kits !-->
+<!-- CheckPoint Kits -->
     <kit id="sack-kit-0" force="true">
-        <item prevent-sharing="true" damage="0" slot="slot.armor.legs" locked="true" name="0">ink sack</item>
+        <leggings locked="true" damage="0" name="0">ink sack</leggings>
     </kit>
     <kit id="sack-kit-1" force="true">
-        <item prevent-sharing="true" damage="1" slot="slot.armor.legs" locked="true" name="1">ink sack</item>
+        <leggings locked="true" damage="1" name="1">ink sack</leggings>
     </kit>
     <kit id="sack-kit-2" force="true">
-        <item prevent-sharing="true" damage="2" slot="slot.armor.legs" locked="true" name="2">ink sack</item>
+        <leggings locked="true" damage="2" name="2">ink sack</leggings>
     </kit>
     <kit id="sack-kit-3" force="true">
-        <item prevent-sharing="true" damage="3" slot="slot.armor.legs" locked="true" name="3">ink sack</item>
+        <leggings locked="true" damage="3" name="3">ink sack</leggings>
     </kit>
     <kit id="sack-kit-4" force="true">
-        <item prevent-sharing="true" damage="4" slot="slot.armor.legs" locked="true" name="4">ink sack</item>
+        <leggings locked="true" damage="4" name="4">ink sack</leggings>
     </kit>
     <kit id="sack-kit-leftfinal" force="true">
-        <item prevent-sharing="true" damage="5" slot="slot.armor.legs" locked="true" name="lf">ink sack</item>
+        <leggings locked="true" damage="5" name="lf">ink sack</leggings>
     </kit>
     <kit id="sack-kit-rightfinal" force="true">
-        <item prevent-sharing="true" damage="6" slot="slot.armor.legs" locked="true" name="rf">ink sack</item>
+        <leggings locked="true" damage="6" name="rf">ink sack</leggings>
     </kit>
 </kits>
 <regions>
     <cuboid id="win-zone" min="30.5,19,55" max="37.5,53,66.5" />
     <above y="70" id="no-zone" />
-
+ 
     <apply block="place-some" />
     <apply enter="never" region="no-zone" />
-<!-- Some checkpoints are at different y to prevent glitching of the system. !-->
-    <cuboid id="chckpnt-1" min="-14,0,62" max="-30.5,70,32" />
+<!-- Some checkpoints are at different y to prevent glitching of the system. -->
+    <cuboid id="chckpnt-1" min="-23,43,65" max="-16,70,71" />
     <cuboid id="chckpnt-2" min="10.5,43,43" max="-13,70,5" />
     <cuboid id="chckpnt-3" min="-33.5,43,-8.5" max="-14,70,19" />
     <cuboid id="chckpnt-4" min="-9,43,2.5" max="16,70,-13" />
     <cuboid id="chckpnt-lf" min="25,0,43" max="74,70,-15" />
     <cuboid id="chckpnt-rf" min="25,0,44" max="133,70,75" />
-
+ 
     <apply kit="sack-kit-1" region="chckpnt-1" />
     <apply kit="sack-kit-2" region="chckpnt-2" />
     <apply kit="sack-kit-3" region="chckpnt-3" />
@@ -101,7 +102,7 @@
     <apply kit="sack-kit-leftfinal" region="chckpnt-lf" />
     <apply kit="sack-kit-rightfinal" region="chckpnt-rf" />
     <apply kit="spawn-kit" region="win-zone"/>
-
+ 
     <below id="prtl-0" y="23" />
     <below id="prtl-1" y="23" />
     <below id="prtl-2" y="23" />
@@ -121,47 +122,47 @@
     </all>
     <not id="sack-0">
         <any>
-            <carrying>
-                <item prevent-sharing="true" damage="0" name="0">ink sack</item>
-            </carrying>
-            <carrying>
-                <item prevent-sharing="true" damage="1" name="1">ink sack</item>
-            </carrying>
-            <carrying>
-                <item prevent-sharing="true" damage="2" name="2">ink sack</item>
-            </carrying>
-            <carrying>
-                <item prevent-sharing="true" damage="3" name="3">ink sack</item>
-            </carrying>
-            <carrying>
-                <item prevent-sharing="true" damage="4" name="4">ink sack</item>
-            </carrying>
-            <carrying>
-                <item prevent-sharing="true" damage="5" name="lf">ink sack</item>
-            </carrying>
-            <carrying>
-                <item prevent-sharing="true" damage="6" name="rf">ink sack</item>
-            </carrying>
+            <wearing>
+                <item damage="0" name="0">ink sack</item>
+            </wearing>
+            <wearing>
+                <item damage="1" name="1">ink sack</item>
+            </wearing>
+            <wearing>
+                <item damage="2" name="2">ink sack</item>
+            </wearing>
+            <wearing>
+                <item damage="3" name="3">ink sack</item>
+            </wearing>
+            <wearing>
+                <item damage="4" name="4">ink sack</item>
+            </wearing>
+            <wearing>
+                <item damage="5" name="lf">ink sack</item>
+            </wearing>
+            <wearing>
+                <item damage="6" name="rf">ink sack</item>
+            </wearing>
         </any>
     </not>
-    <carrying id="sack-1">
-        <item prevent-sharing="true" damage="1" name="1">ink sack</item>
-    </carrying>
-    <carrying id="sack-2">
-        <item prevent-sharing="true" damage="2" name="2">ink sack</item>
-    </carrying>
-    <carrying id="sack-3">
-        <item prevent-sharing="true" damage="3" name="3">ink sack</item>
-    </carrying>
-    <carrying id="sack-4">
-        <item prevent-sharing="true" damage="4" name="4">ink sack</item>
-    </carrying>
-    <carrying id="sack-lf">
-        <item prevent-sharing="true" damage="5" name="lf">ink sack</item>
-    </carrying>
-    <carrying id="sack-rf">
-        <item prevent-sharing="true" damage="6" name="rf">ink sack</item>
-    </carrying>
+    <wearing id="sack-1">
+        <item damage="1" name="1">ink sack</item>
+    </wearing>
+    <wearing id="sack-2">
+        <item damage="2" name="2">ink sack</item>
+    </wearing>
+    <wearing id="sack-3">
+        <item damage="3" name="3">ink sack</item>
+    </wearing>
+    <wearing id="sack-4">
+        <item damage="4" name="4">ink sack</item>
+    </wearing>
+    <wearing id="sack-lf">
+        <item damage="5" name="lf">ink sack</item>
+    </wearing>
+    <wearing id="sack-rf">
+        <item damage="6" name="rf">ink sack</item>
+    </wearing>
 </filters>
 <portals>
     <portal filter="sack-0" region="prtl-0" yaw="@-90">
