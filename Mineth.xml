@@ -6,15 +6,12 @@
 <authors>
     <author uuid="a4266139-34f3-46c5-a730-f8828376a15a" /> <!-- LArrowHead !-->
 </authors>
-<contributors>
-    <contributor contribution="XML Template" uuid="e79fbdc9-627e-4dac-97a6-81a3046220d7" /> <!-- AtlasGames !-->
-</contributors>
 <players max="8" max-overfill="8" />
 <score>
     <limit>2</limit>
     <box points="1" region="win-zone" />
 </score>
-<time>5m</time>
+<time>4m</time>
 <hunger>
     <depletion>off</depletion>
 </hunger>
@@ -74,44 +71,37 @@
     <kit id="sack-kit-4" force="true">
         <leggings locked="true" damage="4" name="4">ink sack</leggings>
     </kit>
-    <kit id="sack-kit-leftfinal" force="true">
-        <leggings locked="true" damage="6" name="lf">ink sack</leggings>
-    </kit>
-    <kit id="sack-kit-rightfinal" force="true">
-        <leggings locked="true" damage="7" name="rf">ink sack</leggings>
+    <kit id="sack-kit-final" force="true">
+        <leggings locked="true" damage="5" name="f">ink sack</leggings>
     </kit>
 </kits>
 <regions>
-    <cuboid id="win-zone" min="-4.5,0,286.5" max="-17.5,30,275.5" />
+    <cuboid id="win-zone" min="-0.5,0,285.5" max="-20,30,300" />
     <above y="30" id="no-zone" />
- 
+
     <apply block="place-some" />
     <apply enter="never" region="no-zone" />
 <!-- Some checkpoints are at different y to prevent glitching of the system. -->
     <cuboid id="chckpnt-1" min="-12,0,94.5" max="16,30,139" />
     <cuboid id="chckpnt-2" min="-10,0,166.5" max="16,30,141.5" />
-    <cuboid id="chckpnt-3" min="=4.5,0,171.5" max="9,30,198" />
-    <cuboid id="chckpnt-4" min="-4.5,0,286.5" max="-16.5,30,217.5" />
-    <cuboid id="chckpnt-lf" min="-3.5,0,232" max="57.5,30,215.5" />
-    <cuboid id="chckpnt-rf" min="-17.5,0,232" max="-74.5,30,215.5" />
- 
+    <cuboid id="chckpnt-3" min="-7,0,170" max="14,30,198" />
+    <cuboid id="chckpnt-4" min="-3.5,0,225" max="-19.5,30,281.5" />
+    <cuboid id="chckpnt-f" min="-3,0,238.5" max="63,30,218"/>
+
     <apply kit="sack-kit-1" region="chckpnt-1" />
     <apply kit="sack-kit-2" region="chckpnt-2" />
     <apply kit="sack-kit-3" region="chckpnt-3" />
     <apply kit="sack-kit-4" region="chckpnt-4" />
-    <apply kit="sack-kit-leftfinal" region="chckpnt-lf" />
-    <apply kit="sack-kit-rightfinal" region="chckpnt-rf" />
+    <apply kit="sack-kit-final" region="chckpnt-f" />
     <apply kit="spawn-kit" region="win-zone"/>
- 
+
     <below id="prtl-0" y="1" />
     <below id="prtl-1" y="1" />
     <below id="prtl-2" y="1" />
     <below id="prtl-3" y="1" />
     <below id="prtl-4" y="1" />
-    <below id="prtl-lf" y="1" />
-    <below id="prtl-rf" y="1" />
-    <cuboid id="portal-left-final" min="16,5,191" max="19,12,194" />
-    <cuboid id="portal-right-final" min="-11,5,194" max="14,12,191" />
+    <below id="prtl-f" y="1" />
+    <cuboid id="portal-final" min="0,0,204" max="5,30,209" />
 </regions>
 <filters>
     <all id="place-some">
@@ -138,10 +128,7 @@
                 <item damage="4" name="4">ink sack</item>
             </wearing>
             <wearing>
-                <item damage="6" name="lf">ink sack</item>
-            </wearing>
-            <wearing>
-                <item damage="7" name="rf">ink sack</item>
+                <item damage="5" name="f">ink sack</item>
             </wearing>
         </any>
     </not>
@@ -157,11 +144,8 @@
     <wearing id="sack-4">
         <item damage="4" name="4">ink sack</item>
     </wearing>
-    <wearing id="sack-lf">
-        <item damage="6" name="lf">ink sack</item>
-    </wearing>
-    <wearing id="sack-rf">
-        <item damage="7" name="rf">ink sack</item>
+    <wearing id="sack-f">
+        <item damage="5" name="f">ink sack</item>
     </wearing>
 </filters>
 <portals>
@@ -187,29 +171,19 @@
     </portal>
     <portal filter="sack-4" region="prtl-4" yaw="@0">
         <destination>
-            <point>-10.5,10,223.5</point>
+            <point>-9,10,231.5</point>
         </destination>
     </portal>
-    <portal filter="sack-lf" region="prtl-lf" yaw="@90">
+    <portal filter="sack-f" region="prtl-f" yaw="@0">
         <destination>
-            <point>50,5,225.5</point>
+            <point>49.5,5,228.5</point>
         </destination>
     </portal>
-    <portal filter="sack-rf" region="prtl-rf" yaw="@-90">
-        <destination>
-            <point>-71,5,225.5</point>
-        </destination>
-    </portal>
-    <portal region="portal-left-final" yaw="@90">
+    <portal region="portal-final" yaw="@90">
       <destination>
-          <point>50,5,225.5</point>
+          <point>49.5,5,228.5</point>
       </destination>
   </portal>
-  <portal region="portal-right-final" yaw="@-90">
-    <destination>
-        <point>-71,5,225.5</point>
-    </destination>
-</portal>
     <portal region="win-zone" yaw="@0">
         <destination>
             <point>2.5,4,69.5</point>
