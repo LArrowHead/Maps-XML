@@ -6,7 +6,7 @@
 <authors>
     <author uuid="a53ab2da-36ed-4886-ac2a-49696de4622f"/><!--   SailorMojo   -->
 </authors>
-    <time>5m</time>
+<time>5m</time>
 <score>
     <kills>1</kills>
 </score>
@@ -42,14 +42,14 @@
     </kit>
 </kits>
 <killreward>
-    <item material="golden apple"/>
+    <item material="golden apple" amount="1"/>
 </killreward>
-<filters>
-    <apply block="never"/>
-</filters>
 <regions>
     <cylinder id="default-spawn" base="93,3,14" radius="1" height="1"/>
 </regions>
+<filters>
+    <apply block="never"/>
+</filters>
 <gamerules>
     <doDaylightCycle>false</doDaylightCycle>
 </gamerules>
