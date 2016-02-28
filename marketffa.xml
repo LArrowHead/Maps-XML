@@ -1,0 +1,68 @@
+<map proto="1.4.0">
+<name>Market</name>
+<version>1.0.0</version>
+<gamemode>ffa</gamemode>
+<objective>Get the most kills within 5 minutes</objective>
+<authors>
+    <author uuid="a53ab2da-36ed-4886-ac2a-49696de4622f"/><!--   SailorMojo   -->
+</authors>
+    <time>5m</time>
+<score>
+    <kills>1</kills>
+</score>
+<players min="5" max="10" show-name-tags="false"/>
+<respawn auto="true"/>
+<spawns safe="true">
+    <default region="default-spawn" yaw="90"/>
+    <spawn kit="spawn-kit" spread="true">
+        <regions>
+            <point yaw="-142">-114,9,-10</point>
+            <point yaw="-111">-115,9,-25</point>
+            <point yaw="-25">-101,9,-53</point>
+            <point yaw="140">-77,9,-32</point>
+            <point yaw="160">-95,9,-25</point>
+            <point yaw="-122">-75,6,-22</point>
+            <point yaw="118">-62,6,-12</point>
+            <point yaw="175">-76,6,-3</point>
+            <point yaw="26">-61,9,-58</point>
+            <point yaw="90">-62,9,-40</point>
+        </regions>
+    </spawn>
+</spawns>
+<kits>
+    <kit id="spawn-kit" potion-particles="true">
+        <item slot="0" unbreakable="true" material="stone sword"/>
+        <item slot="1" unbreakable="true" material="bow"/>
+        <item slot="8" amount="16" material="arrow"/>
+        <helmet unbreakable="true" locked="true" color="7FCC19" material="leather helmet"/>
+        <chestplate unbreakable="true" locked="true" color="7FCC19" material="leather chestplate"/>
+        <leggings unbreakable="true" locked="true" color="7FCC19" material="leather leggings"/>
+        <boots unbreakable="true" locked="true" color="7FCC19" material="leather boots"/>
+        <potion duration="3s" amplifier="5">resistance</potion>
+    </kit>
+</kits>
+<killreward>
+    <item material="golden apple"/>
+</killreward>
+<filters>
+    <apply block="never"/>
+</filters>
+<regions>
+    <cylinder id="default-spawn" base="93,3,14" radius="1" height="1"/>
+</regions>
+<gamerules>
+    <doDaylightCycle>false</doDaylightCycle>
+</gamerules>
+<hunger>
+    <depletion>off</depletion>
+</hunger>
+<itemremove>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>golden apple</item>
+</itemremove>
+</map>
