@@ -1,0 +1,67 @@
+<map proto="1.4.0" game="Racers">
+    <name>Lift</name>
+    <version>1.0.0</version>
+    <authors>
+        <author uuid="fe3608b7-d105-4029-8800-34b3147065b6"/>
+        <!-- rockymine -->
+    </authors>
+    <objective>Fly to the end of the race track!</objective>
+    <players min="6" max="12"/>
+    <time>4m</time>
+    <kits>
+        <kit id="spawn-kit" force="true" potion-particles="false">
+            <item name="`c`lElytra" slot="slot.armor.chest" unbreaking="true">Elytra</item>
+            <potion duration="1" amplifier="5">resistance</potion>
+            <potion duration="oo" amplifier="1">jump_boost</potion>
+            <potion duration="oo" amplifier="1">night_vision</potion>
+            <game-mode>adventure</game-mode>
+        </kit>
+        <kit id="default-kit" force="true" potion-particles="false">
+            <potion duration="oo" amplifier="1">night_vision</potion>
+        </kit>
+        <kit id="kill-player">
+            <potion amplifier="12">instant_damage</potion>
+            <potion duration="0">resistance</potion>
+        </kit>
+    </kits>
+    <spawns>
+        <spawn kit="spawn-kit">
+            <regions yaw="-90" pitch="20">
+                <block>-25.5,89,287.5</block>
+            </regions>
+        </spawn>
+        <default kit="default-kit" yaw="-90" pitch="20">
+            <regions>
+                <block>-25.5,89,287.5</block>
+            </regions>
+        </default>
+    </spawns>
+    <regions>
+        <rectangle id="end-box" min="" max=""/>
+        <complement id="too-low">
+            <below y="12" />
+            <cuboid id="near-end" min="" max="" />
+        </complement>
+        <apply region="too-low" kit="kill-player" />
+    </regions>
+    <filters>
+        <all id="wearing-elytra">
+            <wearing>
+                <item name="`c`lElytra" slot="slot.armor.chest" unbreaking="true">Elytra</item>
+            </wearing>
+        </all>
+    </filters>
+    <score>
+        <limit>1</limit>
+        <box points="1" filter="wearing-elytra" region="end-box"/>
+    </score>
+    <broadcasts>
+        <tip after="0.5s">`rTap space while falling to spread your `5`lElytra wings</tip>
+    </broadcasts>
+    <itemremove>
+        <item>Elytra</item>
+    </itemremove>
+    <disabledamage>
+        <damage>fall</damage>
+    </disabledamage>
+</map>
