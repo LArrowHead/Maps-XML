@@ -37,10 +37,9 @@
         </default>
     </spawns>
     <regions>
-        <rectangle id="end-box" min="" max=""/>
+        <rectangle id="end-box" min="15.0,20.0" max="15.0,29.0"/>
         <complement id="too-low">
             <below y="12" />
-            <cuboid id="near-end" min="" max="" />
         </complement>
         <apply region="too-low" kit="kill-player" />
     </regions>
