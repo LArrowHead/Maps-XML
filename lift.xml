@@ -1,66 +1,355 @@
 <map proto="1.4.0" game="Racers">
-    <name>Lift</name>
-    <version>1.0.0</version>
-    <authors>
-        <author uuid="fe3608b7-d105-4029-8800-34b3147065b6"/>
-        <!-- rockymine -->
-    </authors>
-    <objective>Fly to the end of the race track!</objective>
-    <players min="6" max="12"/>
-    <time>4m</time>
-    <kits>
-        <kit id="spawn-kit" force="true" potion-particles="false">
+<name>Lift</name>
+<version>1.0.0</version>
+<objective>Fly to the end of the race track!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a" /> <!-- LArrowHead -->
+</authors>
+<players min="6" max="12"/>
+<time>4m</time>
+<kits>
+    <kit id="spawn-kit" force="true" potion-particles="false">
+        <item name="`c`lElytra" slot="slot.armor.chest" unbreaking="true" parents=""kit-gate-95-7>Elytra</item>
+        <potion duration="1" amplifier="5">resistance</potion>
+        <potion duration="oo" amplifier="1">jump_boost</potion>
+        <potion duration="oo" amplifier="1">night_vision</potion>
+        <game-mode>adventure</game-mode>
+    </kit>
+    <kit id="default-kit" force="true" potion-particles="false">
+        <potion duration="oo" amplifier="1">night_vision</potion>
+    </kit>
+    <kit id="kill-player">
+        <potion amplifier="12">instant_damage</potion>
+        <potion duration="0">resistance</potion>
+    </kit>
+
+    <!-- Kits start with first gate -->
+    <kit id="kit-gate-95-7">
+        <item slot="0" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lgray!" damage="7">stained glass</item>
+        <clear-items/>
+    </kit>
+
+    <kit id="kit-gate-95-1">
+        <item slot="0" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lorange!" damage="1">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-2">
+        <item slot="0" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lMagenta!" damage="2">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-3">
+        <item slot="0" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lLightBlue!" damage="3">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-4">
+        <item slot="0" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lYellow!" damage="4">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-5">
+        <item slot="0" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lLime!" damage="5">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-6">
+        <item slot="0" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lPink!" damage="6">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-10">
+        <item slot="0" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lPurple!" damage="10">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-11">
+        <item slot="0" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lBlue!" damage="11">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-13">
+        <item slot="0" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lGreen!" damage="13">stained glass</item>
+        <clear-items/>
+    </kit>
+    <kit id="kit-gate-95-14">
+        <item slot="0" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <item slot="1" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <item slot="2" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <item slot="3" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <item slot="5" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <item slot="6" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <item slot="7" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <item slot="8" name="`4`lNext gate is `6`lRed!" damage="14">stained glass</item>
+        <clear-items/>
+    </kit>
+
+    <kit id="kit-gate-01" force="true" parents="kit-gate-95-7"><item name="`c`lElytra`0b" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-02" force="true" parents="kit-gate-95-1"><item name="`c`lElytra`0c" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-03" force="true" parents="kit-gate-95-2"><item name="`c`lElytra`0d" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-04" force="true" parents="kit-gate-95-3"><item name="`c`lElytra`0e" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-05" force="true" parents="kit-gate-95-4"><item name="`c`lElytra`0f" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-06" force="true" parents="kit-gate-95-5"><item name="`c`lElytra`0g" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-07" force="true" parents="kit-gate-95-6"><item name="`c`lElytra`0h" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-08" force="true" parents="kit-gate-95-10"><item name="`c`lElytra`0i" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-09" force="true" parents="kit-gate-95-11"><item name="`c`lElytra`0j" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-10" force="true" parents="kit-gate-95-13"><item name="`c`lElytra`0k" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-11" force="true" parents="kit-gate-95-14"><item name="`c`lElytra`0l" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-12" force="true" parents="kit-gate-95-1"><item name="`c`lElytra`0m" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-13" force="true" parents="kit-gate-95-2"><item name="`c`lElytra`0n" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-14" force="true" parents="kit-gate-95-3"><item name="`c`lElytra`0o" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+
+    <kit id="kit-gate-15" force="true" parents="kit-gate-95-4"><item name="`c`lElytra`0p" slot="slot.armor.chest" unbreaking="true">Elytra</item></kit>
+</kits>
+<spawns>
+    <spawn kit="spawn-kit">
+        <regions yaw="-90" pitch="20">
+            <block>-25.5,88,287.5</block>
+        </regions>
+    </spawn>
+    <default kit="default-kit" yaw="-90" pitch="20">
+        <regions>
+            <block>-25.5,88,287.5</block>
+        </regions>
+    </default>
+</spawns>
+<regions>
+    <rectangle id="end-box" min="-13.0,-20.0" max="-15.0,-29.0"/>
+    <apply velocity="0,1.4,0"><!-- 1st Ring 95:7-->
+        <region>
+            <cuboid min="53.5,0,285.5" max="46.5,48,279.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.4,0"><!-- 2nd Ring 95:1-->
+        <region>
+            <cuboid min="67.5,0,246.5" max="58.5,66,248.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.4,0"><!-- 3rd Ring 95:2 -->
+        <region>
+            <cuboid min="76.5,0,205.5" max="68.5,62,207.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.4,0"><!-- 4th Ring 95:3 -->
+        <region>
+            <cuboid min="88.5,0,180" max="78.5,60,177.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.4,0"><!-- 5th Ring 95:4 -->
+        <region>
+            <cuboid min="82.5,0,155.5" max="91.5,55,154.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.4,0"><!-- 6th Ring 95:5 -->
+        <region>
+            <cuboid min="98,0,105.5" max="90.5,42,103.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.4,0"><!-- 7th Ring 95:6 -->
+        <region>
+            <cuboid min="96.5,0,81.5" max="88.5,40,79.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.4,0"><!-- 8th Ring 95:10 -->
+        <region>
+            <cuboid min="91.5,0,65.5" max="99.5,36,64,5"/>
+        </region>
+    </apply>
+    <apply velocity="0,0.4,0"><!-- 9th Ring 95:11 -->
+        <region>
+            <cuboid min="94.5,0,40.5" max="100.5,34,37.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.8,0"><!-- 10th Ring 95:13 -->
+        <region>
+            <cuboid min="94.5,0,1.5" max="102.5,30,-1.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.8,0"><!-- 11th Ring 95:14-->
+        <region>
+            <cuboid min="90.5,0,-37.5" max="94.5,27,-27.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.8,0"><!-- 12th Ring 95:1 -->
+        <region>
+            <cuboid min="87.5,0,-27.5" max="78.5,28,-24.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.8,0"><!-- 13th Ring 95:2 -->
+        <region>
+            <cuboid min="70.5,0,-13.5" max="68.5,26,-19.5"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.8,0"><!-- 14th Ring 95:3 -->
+        <region>
+            <cuboid min="34.5,0,-12.5" max="33.5,22,-22.2"/>
+        </region>
+    </apply>
+    <apply velocity="0,1.8,0"><!-- 15th Ring 95:4-->
+        <region>
+            <cuboid min="9.5,0,-19.5" max="6.5,22,-26.5"/>
+        </region>
+    </apply>
+
+
+    <cuboid id="region-gate-01" min="43.5,0,303.5" max="-33.5,100,274.5"/><!-- 95:7 -->
+    <cuboid id="region-gate-02" min="35.5,0,275.5" max="95.5,100,250.5"/><!-- 95:1 -->
+    <cuboid id="region-gate-03" min="110.5,0,243.5" max="32.5,100,208.5"/><!-- 95:2 -->
+    <cuboid id="region-gate-04" min="135.5,0,204.5" max="26.5,100,181.5"/><!-- 95:3 -->
+    <cuboid id="region-gate-05" min="132.5,0,177.5" max="46.5,100,155.5"/><!-- 95:4 -->
+    <cuboid id="region-gate-06" min="129.5,0,154.5" max="43.5,100,104.5"/><!-- 95:5 -->
+    <cuboid id="region-gate-07" min="43.5,0,102.5" max="130.5,100,83.5"/><!-- 95:6 -->
+    <cuboid id="region-gate-08" min="130.5,0,80.5" max="49.5,100,66.5"/><!-- 95:10 -->
+    <cuboid id="region-gate-09" min="49.5,0,64.5" max="127.5,100,42.5"/><!-- 95:11 -->
+    <cuboid id="region-gate-10" min="127.5,0,39.5" max="73.5,100,1.5"/><!-- 95:13 -->
+    <cuboid id="region-gate-11" min="951.5,0,-0.4" max="118.5,100,-53.5"/><!-- 95:14 -->
+    <cuboid id="region-gate-12" min="89.5,0,-27.5" max="75.5,100,-51.5"/><!-- 95:1 -->
+    <cuboid id="region-gate-13" min="89.5,0,-26.5" max="70.5,100,-6.5"/><!-- 95:2 -->
+    <cuboid id="region-gate-14" min="67.5,0,-6.5" max="37.5,100,-58.5"/><!-- 95:3 -->
+    <cuboid id="region-gate-15" min="33.5,0,-58.5" max="10.5,100,5.5"/><!-- 95:4 -->
+
+
+    <apply kit="kit-gate-01" region="region-gate-01" filter="filter-gate-01"/>
+    <apply kit="kit-gate-02" region="region-gate-02" filter="filter-gate-02"/>
+    <apply kit="kit-gate-03" region="region-gate-03" filter="filter-gate-03"/>
+    <apply kit="kit-gate-04" region="region-gate-04" filter="filter-gate-04"/>
+    <apply kit="kit-gate-05" region="region-gate-05" filter="filter-gate-05"/>
+    <apply kit="kit-gate-06" region="region-gate-06" filter="filter-gate-06"/>
+    <apply kit="kit-gate-07" region="region-gate-07" filter="filter-gate-07"/>
+    <apply kit="kit-gate-08" region="region-gate-08" filter="filter-gate-08"/>
+    <apply kit="kit-gate-09" region="region-gate-09" filter="filter-gate-09"/>
+    <apply kit="kit-gate-10" region="region-gate-10" filter="filter-gate-10"/>
+    <apply kit="kit-gate-11" region="region-gate-11" filter="filter-gate-11"/>
+    <apply kit="kit-gate-12" region="region-gate-12" filter="filter-gate-12"/>
+    <apply kit="kit-gate-13" region="region-gate-13" filter="filter-gate-13"/>
+    <apply kit="kit-gate-14" region="region-gate-14" filter="filter-gate-14"/>
+    <apply kit="kit-gate-15" region="region-gate-15" filter="filter-gate-15"/>
+</regions>
+<filters>
+    <all id="filter-gate-01"><wearing><item name="`c`lElytra`0a" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-02"><wearing><item name="`c`lElytra`0b" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-03"><wearing><item name="`c`lElytra`0c" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-04"><wearing><item name="`c`lElytra`0d" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-05"><wearing><item name="`c`lElytra`0e" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-06"><wearing><item name="`c`lElytra`0f" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-07"><wearing><item name="`c`lElytra`0g" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-08"><wearing><item name="`c`lElytra`0h" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-09"><wearing><item name="`c`lElytra`0i" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-10"><wearing><item name="`c`lElytra`0j" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-11"><wearing><item name="`c`lElytra`0k" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-12"><wearing><item name="`c`lElytra`0l" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-13"><wearing><item name="`c`lElytra`0m" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-14"><wearing><item name="`c`lElytra`0n" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+    <all id="filter-gate-15"><wearing><item name="`c`lElytra`0o" slot="slot.armor.chest" unbreaking="true">Elytra</item></wearing></all>
+
+
+    <all id="wearing-elytra">
+        <wearing>
             <item name="`c`lElytra" slot="slot.armor.chest" unbreaking="true">Elytra</item>
-            <potion duration="1" amplifier="5">resistance</potion>
-            <potion duration="oo" amplifier="1">jump_boost</potion>
-            <potion duration="oo" amplifier="1">night_vision</potion>
-            <game-mode>adventure</game-mode>
-        </kit>
-        <kit id="default-kit" force="true" potion-particles="false">
-            <potion duration="oo" amplifier="1">night_vision</potion>
-        </kit>
-        <kit id="kill-player">
-            <potion amplifier="12">instant_damage</potion>
-            <potion duration="0">resistance</potion>
-        </kit>
-    </kits>
-    <spawns>
-        <spawn kit="spawn-kit">
-            <regions yaw="-90" pitch="20">
-                <block>-25.5,89,287.5</block>
-            </regions>
-        </spawn>
-        <default kit="default-kit" yaw="-90" pitch="20">
-            <regions>
-                <block>-25.5,89,287.5</block>
-            </regions>
-        </default>
-    </spawns>
-    <regions>
-        <rectangle id="end-box" min="15.0,20.0" max="15.0,29.0"/>
-        <complement id="too-low">
-            <below y="12" />
-        </complement>
-        <apply region="too-low" kit="kill-player" />
-    </regions>
-    <filters>
-        <all id="wearing-elytra">
-            <wearing>
-                <item name="`c`lElytra" slot="slot.armor.chest" unbreaking="true">Elytra</item>
-            </wearing>
-        </all>
-    </filters>
-    <score>
-        <limit>1</limit>
-        <box points="1" filter="wearing-elytra" region="end-box"/>
-    </score>
-    <broadcasts>
-        <tip after="0.5s">`rTap space while falling to spread your `5`lElytra wings</tip>
-    </broadcasts>
-    <itemremove>
-        <item>Elytra</item>
-    </itemremove>
-    <disabledamage>
-        <damage>fall</damage>
-    </disabledamage>
+        </wearing>
+    </all>
+</filters>
+<score>
+    <limit>1</limit>
+    <box points="1" filter="wearing-elytra" region="end-box"/>
+</score>
+<broadcasts>
+    <tip after="0.5s">`rTap space while falling to spread your `5`lElytra wings</tip>
+</broadcasts>
+<itemremove>
+    <item>Elytra</item>
+</itemremove>
+<disabledamage>
+    <damage>fall</damage>
+</disabledamage>
 </map>
