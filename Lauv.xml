@@ -136,10 +136,6 @@
     <allow id="step">
         <material>step</material>
     </allow>
-    <deny id="spawner-plate">
-        <material>147</material>
-        <material>148</material>
-    </deny>
 </filters>
 <regions>
     <rectangle id="map" min="oo,oo" max="oo,oo"/>
@@ -201,7 +197,6 @@
     <apply enter="deny-blue" message="Only Red can enter this wool!" region="green-wool"/>
     <apply block="never" message="You may not modify the spawn exits." region="spawns"/>
     <apply block="never" message="You may not edit the spawner areas." region="spawners"/>
-    <apply block-break="spawner-plate" region="map"/>
     <apply block="no-void" message="You may not modify the void area!" region="non-bridge"/>
 </regions>
 <toolrepair>
