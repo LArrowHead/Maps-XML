@@ -142,7 +142,7 @@
 
     <union id="spawners">
         <cuboid min="-1,8,215" max="-3,9,217"/>
-        <cuboid min="-19,12,249" max="-21,13,251"/>
+        <cuboid min="-18,13,252" max="-21,12,249"/>
         <cuboid min="-37,8,283" max="-39,9,285"/>
         <cuboid min="-47,9,130" max="-45,10,128"/>
         <cuboid min="5,9,372" max="7,10,370"/>
