@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<map proto="1.4.0">
+<version>1.0</version>
+<name>Lauv</name>
+<objective>Capture the enemies wool within 20 minutes!</objective>
+<authors>
+    <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/>
+    <!-- LArrowHead -->
+</authors>
+<teams>
+    <team id="red" color="dark red" max="5">Red</team>
+    <team id="blue" color="blue" max="5">Blue</team>
+</teams>
+<kits>
+    <kit id="spawn" force="true">
+        <item unbreakable="true" slot="0" material="stone sword"/>
+        <item unbreakable="true" slot="1" material="bow"/>
+        <item unbreakable="true" slot="2" material="iron pickaxe">
+            <enchantment level="2">efficiency</enchantment>
+            <enchantment level="2">unbreaking</enchantment>
+        </item>
+        <item unbreakable="true" slot="3" material="iron axe">
+            <enchantment level="2">efficiency</enchantment>
+            <enchantment level="2">unbreaking</enchantment>
+        </item>
+        <item slot="4" damage="1" material="wood" amount="32"/>
+        <item slot="5" damage="0" material="98" amount="32"/>
+        <item slot="8" material="cooked beef" amount="32"/>
+        <item slot="28" material="arrow" amount="32"/>
+        <potion duration="6" amplifier="3">resistance</potion>
+        <potion duration="6" amplifier="3">heal</potion>
+    </kit>
+    <kit id="red-spawn-kit" parents="spawn">
+        <helmet unbreakable="true" color="ff0000">leather helmet</helmet>
+        <chestplate unbreakable="true" enchantment="protection projectile:1" color="ff0000">leather chestplate</chestplate>
+        <leggings unbreakable="true" color="ff0000">leather leggings</leggings>
+        <boots unbreakable="true" color="ff0000">leather boots</boots>
+    </kit>
+    <kit id="blue-spawn-kit" parents="spawn">
+        <helmet unbreakable="true" color="0000ff">leather helmet</helmet>
+        <chestplate unbreakable="true" enchantment="protection projectile:1" color="0000ff">leather chestplate</chestplate>
+        <leggings unbreakable="true" color="0000ff">leather leggings</leggings>
+        <boots unbreakable="true" color="0000ff">leather boots</boots>
+    </kit>
+</kits>
+<spawns>
+    <spawn team="red" kit="red-spawn-kit">
+        <regions yaw="0" pitch="-10">
+            <cuboid min="-19,5,112" max="-21,5,110"/>
+        </regions>
+    </spawn>
+    <spawn team="blue" kit="blue-spawn-kit">
+        <regions yaw="180" pitch="-10">
+            <cuboid min="-21,5,387" max="-19,5,389"/>
+        </regions>
+    </spawn>
+    <default>
+        <regions yaw="90">
+            <point>-24.5,38,195.5</point>
+        </regions>
+    </default>
+</spawns>
+<kill-rewards>
+    <kill-reward>
+        <item amount="4" damage="0" material="98"/>
+    </kill-reward>
+    <kill-reward>
+        <item amount="6" material="arrow"/>
+    </kill-reward>
+</kill-rewards>
+<filters>
+    <not id="in-orange-wool">
+        <any>
+            <team>red</team>
+            <material>stained clay</material>
+            <material>log</material>
+            <material>stained glass</material>
+            <material>dark oak fence</material>
+            <material>chest</material>
+            <material>wood</material>
+            <material>43</material>
+            <material>98</material>
+            <material>stone</material>
+            <material>stone plate</material>
+            <material>wool</material>
+            <material>44</material>
+            <material>redstone</material>
+            <material>170</material>
+        </any>
+    </not>
+    <not id="in-green-wool">
+        <any>
+            <team>blue</team>
+            <material>stained clay</material>
+            <material>log</material>
+            <material>stained glass</material>
+            <material>dark oak fence</material>
+            <material>chest</material>
+            <material>wood</material>
+            <material>43</material>
+            <material>98</material>
+            <material>stone</material>
+            <material>stone plate</material>
+            <material>wool</material>
+            <material>44</material>
+            <material>redstone</material>
+            <material>170</material>
+        </any>
+    </not>
+    <all id="only-red-chest">
+        <team>red</team>
+        <material>chest</material>
+    </all>
+    <all id="only-blue-chest">
+        <team>blue</team>
+        <material>chest</material>
+    </all>
+    <deny id="deny-red">
+        <team>red</team>
+    </deny>
+    <deny id="deny-blue">
+        <team>blue</team>
+    </deny>
+    <deny id="no-void">
+        <void/>
+    </deny>
+    <allow id="leaves">
+        <material>leaves</material>
+    </allow>
+    <allow id="stairs">
+        <material>109</material>
+    </allow>
+    <allow id="clay">
+        <material>15</material>
+    </allow>
+    <allow id="step">
+        <material>step</material>
+    </allow>
+</filters>
+<regions>
+    <rectangle id="map" min="oo,oo" max="oo,oo"/>
+
+    <union id="spawners">
+        <cuboid min="-1,8,215" max="-3,9,217"/>
+        <cuboid min="-19,12,249" max="-21,13,251"/>
+        <cuboid min="-37,8,283" max="-39,9,285"/>
+        <cuboid min="-47,9,130" max="-45,10,128"/>
+        <cuboid min="5,9,372" max="7,10,370"/>
+    </union>
+    <negative id="non-bridge">
+        <union id="bridge">
+            <!--Red Side-->
+            <rectangle min="-13,140" max="-26,153"/>
+            <rectangle min="-30,177" max="-41,164"/>
+            <rectangle min="-41,177" max="-38,179"/>
+            <rectangle min="-50,164" max="-41,152"/>
+            <rectangle min="-38,189" max="-48,199"/>
+            <rectangle min="-26,207" max="-15,215"/>
+            <rectangle min="-30,215" max="-37,228"/>
+            <rectangle min="-15,230" max="-5,218"/>
+            <rectangle min="-30,233" max="-23,240"/>
+            <rectangle min="-30,240" max="-40,250"/>
+            <!--Blue Side-->
+            <rectangle min="-26,361" max="-13,348"/>
+            <rectangle min="-1,324" max="2,322"/>
+            <rectangle min="-9,324" max="2,337"/>
+            <rectangle min="2,349" max="11,337"/>
+            <rectangle min="-1,312" max="9,302"/>
+            <rectangle min="-13,294" max="-24,286"/>
+            <rectangle min="-9,286" max="-2,273"/>
+            <rectangle min="-34,283" max="-24,271"/>
+            <rectangle min="-9,268" max="-16,261"/>
+            <rectangle min="-9,261" max="1,251"/>
+            <cuboid id="red-spawn" min="-9,0,94" max="-31,24,132"/>
+            <cuboid id="blue-spawn" min="-31,0,405" max="-9,24,368"/>
+            <cuboid id="green-wool" min="-1,1,362" max="14,24,381"/>
+            <cuboid id="orange-wool" min="-38,1,139" max="-53,24,118"/>
+        </union>
+    </negative>
+    <union id="spawns">
+        <region id="red-spawn"/>
+        <region id="blue-spawn"/>
+    </union>
+
+    <union id="wool-rooms">
+        <region id="green-wool"/>
+        <region id="orange-wool"/>
+    </union>
+
+    <apply block="in-green-wool" filter="deny-blue" region="green-wool"/>
+    <apply block="in-orange-wool" filter="deny-red" region="orange-wool"/>
+    <apply block-break="leaves" region="non-bridge"/>
+    <apply block-break="stairs" region="non-bridge"/>
+    <apply block-break="clay" region="non-bridge"/>
+    <apply block-break="step" region="non-bridge"/>
+    <apply enter="deny-red" message="Only Blue can enter this wool!" region="orange-wool"/>
+    <apply enter="deny-blue" message="Only Red can enter this wool!" region="green-wool"/>
+    <apply block="never" message="You may not modify the spawn exits." region="spawns"/>
+    <apply block="never" message="You may not edit the spawner areas." region="spawners"/>
+    <apply block="no-void" message="You may not modify the void area!" region="non-bridge"/>
+</regions>
+<toolrepair>
+    <tool>stone sword</tool>
+    <tool>bow</tool>
+    <tool>iron pickaxe</tool>
+    <tool>iron axe</tool>
+</toolrepair>
+<itemremove>
+    <item>cooked beef</item>
+    <item>stained clay</item>
+    <item>stained glass</item>
+    <item>glass</item>
+    <item>nether fence</item>
+    <item>spruce fence</item>
+    <item>dark oak fence</item>
+    <item>98</item>
+    <item>5</item>
+    <item>143</item>
+    <item>wood plate</item>
+    <item>diamond chestplate</item>
+    <item>leather helmet</item>
+    <item>leather chestplate</item>
+    <item>leather leggings</item>
+    <item>leather boots</item>
+    <item>stone</item>
+    <item>log</item>
+    <item>44</item>
+    <item>170</item>
+    <item>126</item>
+    <item>sapling</item>
+    <item>wool:15</item>
+    <item>wool:14</item>
+    <item>wool:11</item>
+    <item>wool:7</item>
+    <item>leaves</item>
+    <item>139</item>
+    <item>109</item>
+    <item>77</item>
+    <item>apple</item>
+    <item>redstone</item>
+</itemremove>
+<destroyables mode-changes="true" show="false" required="false" completion="0%" materials="stained glass">
+    <destroyable name="monu" owner="red">
+        <region>
+            <cuboid min="25,0,412" max="-64,1,93"/>
+        </region>
+    </destroyable>
+    <destroyable name="monu" owner="blue">
+        <region>
+            <cuboid min="25,0,412" max="-64,1,93"/>
+        </region>
+    </destroyable>
+</destroyables>
+    <modes>
+        <mode show-before="0" material="air" after="0s"/>
+    </modes>
+<wools>
+    <wool color="green" team="red" location="6.5,10,371.5">
+        <monument><block>-20,5,107</block></monument>
+    </wool>
+    <wool color="orange" team="blue" location="-45.5,10,129.5">
+        <monument><block>-20,5,393</block></monument>
+    </wool>
+</wools>
+<timelock>on</timelock>
+<maxbuildheight>22</maxbuildheight>
+<time result="objectives">20m</time>
+</map>
