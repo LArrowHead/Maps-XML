@@ -1,7 +1,10 @@
 <?xml version="1.0"?>
 <map proto="1.4.0">
-<version>1.0</version>
+<version>1.5</version>
 <name>Lauv</name>
+<phase>development</phase>
+<edition>tournament<edition>
+<gamemode>ctw</gamemode>
 <objective>Capture the enemies wool within 20 minutes!</objective>
 <authors>
     <author uuid="a4266139-34f3-46c5-a730-f8828376a15a"/>
@@ -23,37 +26,90 @@
             <enchantment level="2">efficiency</enchantment>
             <enchantment level="2">unbreaking</enchantment>
         </item>
-        <item slot="4" damage="1" material="wood" amount="32"/>
-        <item slot="5" damage="0" material="98" amount="32"/>
+        <item slot="4" damage="1" material="wood" amount="8"/>
+        <item slot="5" damage="0" material="98" amount="48"/>
         <item slot="8" material="cooked beef" amount="32"/>
         <item slot="28" material="arrow" amount="32"/>
-        <potion duration="6" amplifier="3">resistance</potion>
-        <potion duration="6" amplifier="3">heal</potion>
+        <potion duration="10" amplifier="3">resistance</potion>
+        <potion duration="10" amplifier="3">heal</potion>
+        <potion duration="20" amplifier="1">regeneration</potion>
+        <potion duration="20" amplifier="1">speed</potion>
     </kit>
     <kit id="red-spawn-kit" parents="spawn">
-        <helmet unbreakable="true" color="ff0000">leather helmet</helmet>
-        <chestplate unbreakable="true" enchantment="protection projectile:1" color="ff0000">leather chestplate</chestplate>
-        <leggings unbreakable="true" color="ff0000">leather leggings</leggings>
-        <boots unbreakable="true" color="ff0000">leather boots</boots>
+        <helmet unbreakable="true" color="ff0000" enchantment="protection projectile:1">leather helmet</helmet>
+        <chestplate unbreakable="true" enchantment="protection projectile:2" color="ff0000">leather chestplate</chestplate>
+        <leggings unbreakable="true" enchantment="protection projectile:2">iron leggings</leggings>
+        <boots unbreakable="true" color="ff0000" enchantment="protection projectile:1">leather boots</boots>
     </kit>
     <kit id="blue-spawn-kit" parents="spawn">
-        <helmet unbreakable="true" color="0000ff">leather helmet</helmet>
-        <chestplate unbreakable="true" enchantment="protection projectile:1" color="0000ff">leather chestplate</chestplate>
-        <leggings unbreakable="true" color="0000ff">leather leggings</leggings>
-        <boots unbreakable="true" color="0000ff">leather boots</boots>
+        <helmet unbreakable="true" color="0000ff" enchantment="protection projectile:1">leather helmet</helmet>
+        <chestplate unbreakable="true" enchantment="protection projectile:2" color="0000ff">leather chestplate</chestplate>
+        <leggings unbreakable="true" enchantment="protection projectile:2">iron leggings</leggings>
+        <boots unbreakable="true" color="0000ff" enchantment="protection projectile:1">leather boots</boots>
     </kit>
 </kits>
+<respawn auto="false" delay="4s" blackout="false" />
 <spawns>
-    <spawn team="red" kit="red-spawn-kit">
-        <regions yaw="0" pitch="-10">
-            <cuboid min="-19,5,112" max="-21,5,110"/>
-        </regions>
-    </spawn>
-    <spawn team="blue" kit="blue-spawn-kit">
-        <regions yaw="180" pitch="-10">
-            <cuboid min="-21,5,387" max="-19,5,389"/>
-        </regions>
-    </spawn>
+    <spawn team="red" filter="spawn1" kit="red-spawn-kit">
+            <regions yaw="0" pitch="90">
+                <block>-19.5,48,121.5</block>
+            </regions>
+        </spawn>
+        <spawn team="red" filter="spawn2" kit="red-spawn-kit">
+            <regions yaw="0" pitch="90">
+                <block>-19.5,78,121.5</block>
+            </regions>
+        </spawn>
+        <spawn team="red" filter="spawn3" kit="red-spawn-kit">
+            <regions yaw="0" pitch="90">
+                <block>-19.5,108,121.5</block>
+            </regions>
+        </spawn>
+        <spawn team="red" filter="spawn4" kit="red-spawn-kit">
+            <regions yaw="0" pitch="90">
+                <block>-19.5,138,121.5</block>
+            </regions>
+        </spawn>
+        <spawn team="red" filter="spawn5" kit="red-spawn-kit">
+            <regions yaw="0" pitch="90">
+                <block>-19.5,168,121.5</block>
+            </regions>
+        </spawn>
+        <spawn team="red" filter="spawn6" kit="red-spawn-kit">
+            <regions yaw="0" pitch="90">
+                <block>-19.5,198,121.5</block>
+            </regions>
+        </spawn>
+        <spawn team="blue" filter="spawn1" kit="blue-spawn-kit">
+            <regions yaw="180" pitch="90">
+                <block>-21.5,48,353.5</block>
+            </regions>
+        </spawn>
+        <spawn team="blue" filter="spawn2" kit="blue-spawn-kit">
+            <regions yaw="180" pitch="90">
+                <block>-21.5,78,353.5</block>
+            </regions>
+        </spawn>
+        <spawn team="blue" filter="spawn3" kit="blue-spawn-kit">
+            <regions yaw="180" pitch="90">
+                <block>-21.5,108,353.5</block>
+            </regions>
+        </spawn>
+        <spawn team="blue" filter="spawn4" kit="blue-spawn-kit">
+            <regions yaw="180" pitch="90">
+                <block>-21.5,138,353.5</block>
+            </regions>
+        </spawn>
+        <spawn team="blue" filter="spawn5" kit="blue-spawn-kit">
+            <regions yaw="180" pitch="90">
+                <block>-21.5,168,353.5</block>
+            </regions>
+        </spawn>
+        <spawn team="blue" filter="spawn6" kit="blue-spawn-kit">
+            <regions yaw="180" pitch="90">
+                <block>-21.5,198,353.5</block>
+            </regions>
+        </spawn>
     <default>
         <regions yaw="90">
             <point>-24.5,38,195.5</point>
@@ -68,7 +124,82 @@
         <item amount="6" material="arrow"/>
     </kill-reward>
 </kill-rewards>
+<crafting>
+    <shaped override="true">
+        <result material="iron helmet">
+            <enchantment level="2">protection projectile</enchantment>
+        </result>
+        <shape>
+            <row>III</row>
+            <row>I.I</row>
+        </shape>
+        <ingredient symbol="I">iron ingot</ingredient>
+    </shaped>
+    <shaped override="true">
+        <result material="iron chestplate">
+            <enchantment level="2">protection projectile</enchantment>
+        </result>
+        <shape>
+            <row>I.I</row>
+            <row>III</row>
+            <row>III</row>
+        </shape>
+        <ingredient symbol="I">iron ingot</ingredient>
+    </shaped>
+    <shaped override="true">
+        <result material="iron leggings">
+            <enchantment level="2">protection projectile</enchantment>
+        </result>
+        <shape>
+            <row>III</row>
+            <row>I.I</row>
+            <row>I.I</row>
+        </shape>
+        <ingredient symbol="I">iron ingot</ingredient>
+    </shaped>
+    <shaped override="true">
+        <result material="iron boots">
+            <enchantment level="2">protection projectile</enchantment>
+        </result>
+        <shape>
+            <row>I.I</row>
+            <row>I.I</row>
+        </shape>
+        <ingredient symbol="I">iron ingot</ingredient>
+    </shaped>
+</crafting>
 <filters>
+      <not id="spawn1">
+          <time>3m</time>
+      </not>
+          <all id="spawn2">
+              <time>3m</time>
+              <not>
+                  <time>6m</time>
+              </not>
+          </all>
+          <all id="spawn3">
+              <time>6m</time>
+              <not>
+                  <time>9m</time>
+              </not>
+          </all>
+          <all id="spawn4">
+              <time>9m</time>
+              <not>
+                  <time>12m</time>
+              </not>
+          </all>
+          <all id="spawn5">
+              <time>12m</time>
+              <not>
+                  <time>15m</time>
+              </not>
+          </all>
+          <all id="spawn6">
+              <time>15m</time>
+          </all>
+
     <not id="in-orange-wool">
         <any>
             <team>red</team>
@@ -131,7 +262,7 @@
         <material>109</material>
     </allow>
     <allow id="clay">
-        <material>15</material>
+        <material>159</material>
     </allow>
     <allow id="step">
         <material>step</material>
@@ -141,40 +272,39 @@
     <rectangle id="map" min="oo,oo" max="oo,oo"/>
 
     <union id="spawners">
-        <cuboid min="-1,8,215" max="-3,9,217"/>
-        <cuboid min="-18,13,252" max="-21,12,249"/>
-        <cuboid min="-37,8,283" max="-39,9,285"/>
-        <cuboid min="-47,9,130" max="-45,10,128"/>
-        <cuboid min="5,9,372" max="7,10,370"/>
+        <cuboid min="-18,11,240" max="-23,22,235"/>
+        <cuboid min="-38,7,265" max="-41,22,268"/>
+        <cuboid min="-3,7,210" max="0,22,207"/>
+        <cuboid min="3,0,335" max="6,22,338"/>
+        <cuboid min="-44,0,140" max="-47,22,137"/>
     </union>
     <negative id="non-bridge">
         <union id="bridge">
             <!--Red Side-->
-            <rectangle min="-13,140" max="-26,153"/>
-            <rectangle min="-30,177" max="-41,164"/>
-            <rectangle min="-41,177" max="-38,179"/>
-            <rectangle min="-50,164" max="-41,152"/>
-            <rectangle min="-38,189" max="-48,199"/>
-            <rectangle min="-26,207" max="-15,215"/>
-            <rectangle min="-30,215" max="-37,228"/>
-            <rectangle min="-15,230" max="-5,218"/>
-            <rectangle min="-30,233" max="-23,240"/>
-            <rectangle min="-30,240" max="-40,250"/>
+            <rectangle min="-48,196" max="-38,184"/>
+            <rectangle min="-48,186" max="-50,184"/>
+            <rectangle min="-39,170" max="-50,168"/>
+            <rectangle min="-41,161" max="-50,168"/>
+            <rectangle min="-26,221" max="-33,210"/>
+            <rectangle min="-4,213" max="-15,221"/>
+            <rectangle min="-15,221" max="-26,229"/>
+            <rectangle min="-26,229" max="-18,232"/>
             <!--Blue Side-->
-            <rectangle min="-26,361" max="-13,348"/>
-            <rectangle min="-1,324" max="2,322"/>
-            <rectangle min="-9,324" max="2,337"/>
-            <rectangle min="2,349" max="11,337"/>
-            <rectangle min="-1,312" max="9,302"/>
-            <rectangle min="-13,294" max="-24,286"/>
-            <rectangle min="-9,286" max="-2,273"/>
-            <rectangle min="-34,283" max="-24,271"/>
-            <rectangle min="-9,268" max="-16,261"/>
-            <rectangle min="-9,261" max="1,251"/>
-            <cuboid id="red-spawn" min="-9,0,94" max="-31,24,132"/>
-            <cuboid id="blue-spawn" min="-31,0,405" max="-9,24,368"/>
-            <cuboid id="green-wool" min="-1,1,362" max="14,24,381"/>
-            <cuboid id="orange-wool" min="-38,1,139" max="-53,24,118"/>
+            <rectangle min="9,307" max="0,314"/>
+            <rectangle min="-2,307" max="9,305"/>
+            <rectangle min="9,289" max="-3,291"/>
+            <rectangle min="-3,279" max="7,289"/>
+            <rectangle min="-15,265" max="-8,254"/>
+            <rectangle min="-37,262" max="-26,254"/>
+            <rectangle min="-26,254" max="-15,246"/>
+            <rectangle min="-15,246" max="-23,243"/>
+            <!--Generic regions-->
+            <cuboid id="red-spawn" min="0,0,100" max="-32,300,162"/>
+            <cuboid id="blue-spawn" min="-36,0,378" max="-9,300,313"/>
+            <cuboid id="green-wool" min="-6,0,327" max="16,65,348"/>
+            <cuboid id="orange-wool" min="-35,0,148" max="-56,65,127"/>
+            <rectangle id="red-iron" min="2,186" max="-11,168"/>
+            <rectangle id="blue-iron" min="-47,287" max="-30,304"/>
         </union>
     </negative>
     <union id="spawns">
@@ -196,8 +326,10 @@
     <apply enter="deny-red" message="Only Blue can enter this wool!" region="orange-wool"/>
     <apply enter="deny-blue" message="Only Red can enter this wool!" region="green-wool"/>
     <apply block="never" message="You may not modify the spawn exits." region="spawns"/>
-    <apply block="never" message="You may not edit the spawner areas." region="spawners"/>
+    <apply block="never" message="You may not modify the spawners area." region="spawners"/>
     <apply block="no-void" message="You may not modify the void area!" region="non-bridge"/>
+    <apply enter="deny-red" message="You may not enter the enemy spawn!" region="blue-spawn"/>
+    <apply enter="deny-blue" message="You may not enter the enemy spawn!" region="red-spawn"/>
 </regions>
 <toolrepair>
     <tool>stone sword</tool>
@@ -240,16 +372,17 @@
     <item>redstone</item>
     <item>147</item>
     <item>148</item>
+    <item>iron leggings</item>
 </itemremove>
 <destroyables mode-changes="true" show="false" required="false" completion="0%" materials="stained glass">
     <destroyable name="monu" owner="red">
         <region>
-            <cuboid min="25,0,412" max="-64,1,93"/>
+            <cuboid min="-97,0,83" max="36,1,397"/>
         </region>
     </destroyable>
     <destroyable name="monu" owner="blue">
         <region>
-            <cuboid min="25,0,412" max="-64,1,93"/>
+            <cuboid min="-97,0,83" max="36,1,397"/>
         </region>
     </destroyable>
 </destroyables>
@@ -257,11 +390,11 @@
         <mode show-before="0" material="air" after="0s"/>
     </modes>
 <wools>
-    <wool color="green" team="red" location="6.5,10,371.5">
-        <monument><block>-20,5,107</block></monument>
+    <wool color="green" team="red" location="4.5,10,336.5">
+        <monument><block>-20,5,153</block></monument>
     </wool>
-    <wool color="orange" team="blue" location="-45.5,10,129.5">
-        <monument><block>-20,5,393</block></monument>
+    <wool color="orange" team="blue" location="-45.5,10,138.5">
+        <monument><block>-22,5,321</block></monument>
     </wool>
 </wools>
 <timelock>on</timelock>
