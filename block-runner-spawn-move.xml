@@ -1,0 +1,68 @@
+<!-- The times are just an example, they can easily be changed. -->
+
+<!--Filters-->
+<filters> 
+    <not id="spawn1">
+        <time>3m</time>
+    </not>
+    <all id="spawn2">
+        <time>3m</time>
+        <not>
+            <time>6m</time>
+        </not>
+    </all>
+    <all id="spawn3">
+        <time>6m</time>
+        <not>
+            <time>9m</time>
+        </not>
+    </all>
+    <all id="spawn4">
+        <time>9m</time>
+        <not>
+            <time>12m</time>
+        </not>
+    </all>
+    <all id="spawn5">
+        <time>12m</time>
+        <not>
+            <time>15m</time>
+        </not>
+    </all>
+    <all id="spawn6">
+        <time>15m</time>
+    </all>
+</filters>
+<!-- Spawns with their respective filters -->
+<spawns>
+    <spawn team="" filter="spawn1" kit="">
+        <regions yaw="">
+            <block></block>
+        </regions>
+    </spawn>
+    <spawn team="" filter="spawn2" kit="">
+        <regions yaw="">
+            <block></block>
+        </regions>
+    </spawn>
+    <spawn team="" filter="spawn3" kit="">
+        <regions yaw="">
+            <block></block>
+        </regions>
+    </spawn>
+    <spawn team="" filter="spawn4" kit="">
+        <regions yaw="">
+            <block></block>
+        </regions>
+    </spawn>
+    <spawn team="" filter="spawn5" kit="">
+        <regions yaw="">
+            <block></block>
+        </regions>
+    </spawn>
+    <spawn team="" filter="spawn6" kit="">
+        <regions yaw="">
+            <block></block>
+        </regions>
+    </spawn>
+</spawn>
