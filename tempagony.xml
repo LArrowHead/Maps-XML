@@ -1,0 +1,63 @@
+<?xml version="1.0">
+<map proto="1.4.0">
+    <name><name/>
+    <version><version/>
+    <objective><objective/>
+    <gamemode>Arcade</gamemode>
+    <authors>
+        <author uuid="" />
+        <!--    -->
+    </authors>
+    <players min="4" max="8" colors="true"/>
+    <time>2m</time>
+    <spawns>
+        <spawn kit="">
+            <regions yaw="">
+                <region id="" />
+            </regions>
+        </spawn>
+        <default>
+            <regions yaw="">
+                <point><point/>
+            </regions>
+        </default>
+    </spawns>
+    <kits>
+        <kit id="">
+            <health>1</health>
+            <game-mode>adventure</game-mode>
+            <potion duration="oo" amplifier="1">invisibility</potion>
+            <potion duration="oo" amplifier="-4">health boost</potion>
+            <walk-speed>4</walk-speed>
+            <boots unbreakable="true" locked="true">gold boots</boots>
+        </kit>
+    </kits>
+    <score>
+        <limit>1</limit>
+        <box points="1">
+            <region>
+                <cuboid id="" min="" max="" />
+            </region>
+        </box>
+    </score>
+    <blitz>
+        <lives>1</lives>
+    </blitz>
+    <itemremove>
+        <item>gold boots</item>
+    </itemremove>
+    <regions>
+        <block id=""><block/>
+    </regions>
+    <world-borders center="" warning-distance="10">
+        <world-border size=""/>
+    <world-border size="" after="" duration=""/>
+</wold-borders>
+    <hunger>
+        <depletion>off</depletion>
+    </hunger>
+    <disabledamage>
+        <damage>fall</damage>
+        <damage>entity attack</damage>
+    </disabledamage>
+</map>
